@@ -229,6 +229,20 @@ main button {
   background-color: rgba(0, 128, 0, 0.7);
 }
 
+/*
+* メイン音量スライダーcss
+*/
+#item-main-vol[type="range"] {
+  -webkit-appearance:slider-vertical;
+  writing-mode: bt-lr;
+}
+
+#item-mic-vol[type="range"] {
+  -webkit-appearance:slider-vertical;
+  writing-mode: bt-lr;
+}
+
+
 
 /*
 * フッター文字css
