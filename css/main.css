@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/* 自動で付く余白をリセット */
+*{
+  /*
+  padding: 0;
+  margin: auto;
+  */
+}
+
+body {
+  background-image: url("/img/3722440067-1872285-vgqM-1920x1080-MM-100.jpg");
+}
+
+.start-page {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.startup-page {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.main-page {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.shutdown-page {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.shutdown-cofirmation-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.mic-details-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.vp-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.screen-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.blu-ray-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+.camera-popup {
+  visibility: hidden;
+  visibility: visible;
+}
+
+
+/*
+* グリッドレイアウト css
+*/
+#container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+/*
+* ヘッダーエリア css
+*/
+header {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  background-color: rgb(65, 105, 225, 0.6);
+  text-align: center;
+  color: white;
+}
+
+/*
+* 左ナビエリア css
+*/
+nav {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: rgb(65, 105, 225, 0.6);
+  text-align: center;
+  color: white;
+}
+
+/*
+* メインエリア css
+*/
+main {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: rgb(65, 105, 225, 0.6);
+  text-align: center;
+  color: white;
+  padding-bottom: 10em;
+}
+
+
+/*
+* 右サイドエリア css
+*/
+aside {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  background-color: rgb(65, 105, 225, 0.6);
+  text-align: center;
+  color: white;
+}
+
+#item-shutdown-btn {
+  border-radius: 5px;
+  background-color: rgba(128, 0, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 70%;
+}
+
+/*
+* フッター エリアcss
+*/
+footer {
+  grid-column: 1/5;
+  grid-row: 3/4;
+  background-color: rgb(65, 105, 225, 0.6);
+  color: white;
+}
+
+
+/*
+* 操作枠css
+*/
+.box29 {
+  margin: 2em 1em;
+  background-color: rgb(220, 239, 255, 0.7);
+}
+.box29 .box-title {
+  font-size: 1.2em;
+  background: #5fb3f5;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.box29 button {
+  /*padding: 1em 1em;*/
+  margin: 1em 1em;
+}
+
+/*
+* ボタンcss
+*/
+main button {
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 15%;
+}
+
+#item-btn1 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn2 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn3 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn4 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn-main-off {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+
+#item-btn5 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn6 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn7 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn8 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn-monitor-off {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+
+#item-btn9 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn10 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn11 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn12 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#item-btn13 {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+
+
+/*
+* フッター文字css
+*/
+#footer-txt {
+  text-indent: 1em;
+}
+
+
