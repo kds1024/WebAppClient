@@ -120,18 +120,6 @@ aside {
   color: white;
 }
 
-#item-shutdown-btn {
-  border-radius: 5px;
-  background-color: rgba(128, 0, 0, 0.7);
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-  border-style: none;
-  outline: none;
-  width: 70%;
-}
 
 /*
 * フッター エリアcss
@@ -143,9 +131,26 @@ footer {
   color: white;
 }
 
+/*
+ *  ナビゲーション操作枠内ボタンcss
+ */
+/* 環境設定css */
+#item-envronments-btn {
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 70%;
+}
+
 
 /*
-* 操作枠css
+* メイン操作枠内css
 */
 .box29 {
   margin: 2em 1em;
@@ -166,7 +171,7 @@ footer {
 }
 
 /*
-* ボタンcss
+* メイン操作枠内ボタンcss
 */
 main button {
   border-radius: 5px;
@@ -229,18 +234,81 @@ main button {
   background-color: rgba(0, 128, 0, 0.7);
 }
 
+
+
 /*
-* メイン音量スライダーcss
+* 右サイドバー内css
 */
-#item-main-vol[type="range"] {
-  -webkit-appearance:slider-vertical;
-  writing-mode: bt-lr;
+/* シャットダウンボタンcss */
+#item-shutdown-btn {
+  border-radius: 5px;
+  background-color: rgba(128, 0, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 70%;
 }
 
-#item-mic-vol[type="range"] {
-  -webkit-appearance:slider-vertical;
-  writing-mode: bt-lr;
+/*
+* 音量スライダー＆文字css
+*/
+.slider-wrapper {
+  display: inline-block;
+  width: 6em;
+  height: 15em;
+  padding: 0;
+  margin-top: 5em;
 }
+
+.slider-wrapper #item-main-vol[type="range"] {
+  width: 15em;
+  height: 6em;
+  margin: 0;
+  transform-origin: 7.5em 7.5em;
+  transform: rotate(-90deg);
+}
+
+.slider-wrapper #item-mic-vol[type="range"] {
+  width: 15em;
+  height: 6em;
+  margin: 0;
+  transform-origin: 7.5em 7.5em;
+  transform: rotate(-90deg);
+}
+
+/*
+* ミュートボタンcss
+*/
+#item-audio-mute-btn {
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.7);
+  padding: 1.5em 0;
+  margin: 1em;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 30%;
+}
+
+#item-mic-mute-btn {
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.7);
+  padding: 1.5em 0;
+  margin: 1em;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 30%;
+}
+
 
 
 
