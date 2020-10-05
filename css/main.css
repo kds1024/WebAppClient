@@ -12,57 +12,6 @@ body {
   background-image: url("/img/3722440067-1872285-vgqM-1920x1080-MM-100.jpg");
 }
 
-.start-page {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.startup-page {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.main-page {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.shutdown-page {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.shutdown-cofirmation-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.mic-details-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.vp-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.screen-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.blu-ray-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.camera-popup {
-  visibility: hidden;
-  visibility: visible;
-}
-
-
 /*
 * グリッドレイアウト css
 */
@@ -108,7 +57,6 @@ main {
   padding-bottom: 10em;
 }
 
-
 /*
 * 右サイドエリア css
 */
@@ -120,7 +68,6 @@ aside {
   color: white;
 }
 
-
 /*
 * フッター エリアcss
 */
@@ -131,13 +78,32 @@ footer {
   color: white;
 }
 
+
 /*
- *  ナビゲーション操作枠内ボタンcss
+ * スタートページcss
  */
-/* 環境設定css */
-#item-envronments-btn {
+#start-page {
+  display: none;
+}
+
+/*
+* スタートアップページcss
+*/
+#startup-page {
+  display: none;
+}
+
+/*
+* メインページcss
+*/
+#main-page {
+}
+
+/* ナビゲーションエリア */
+/* 映像選択ボタンcss */
+#item-video-select-btn {
   border-radius: 5px;
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
   padding: 10px;
   margin: 10px;
   text-align: center;
@@ -148,17 +114,43 @@ footer {
   width: 70%;
 }
 
+/* 音量詳細ボタンcss */
+#item-audio-details-btn {
+  border-radius: 5px;
+  background-color: rgb(0, 128, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 70%;
+}
 
-/*
-* メイン操作枠内css
-*/
+/* 環境設定ボタンcss */
+#item-envronments-btn {
+  border-radius: 5px;
+  background-color: rgb(0, 128, 0, 0.7);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  width: 70%;
+}
+
+/* メインエリア */
+/* 操作枠css */
 .box29 {
   margin: 2em 1em;
-  background-color: rgb(220, 239, 255, 0.7);
+  background-color: rgb(220, 239, 255);
 }
 .box29 .box-title {
   font-size: 1.2em;
-  background: #5fb3f5;
+  background: #539bd3;
   padding: 4px;
   text-align: center;
   color: #FFF;
@@ -170,14 +162,31 @@ footer {
   margin: 1em 1em;
 }
 
-/*
-* メイン操作枠内ボタンcss
-*/
+/* ポップアップ枠css */
+.box30 {
+  margin: 1em;
+  background-color: rgb(220, 239, 255);
+}
+.box30 .box-title {
+  font-size: 1.2em;
+  background: #539bd3;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.box30 button {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* ボタンcss */
 main button {
   border-radius: 5px;
-  background-color: rgba(0, 128, 0, 0.7);
-  padding: 10px;
-  margin: 10px;
+  background-color: rgb(0, 128, 0, 0.7);
+  padding: 0.5em;
+  margin: 0.5em;
   text-align: center;
   color: white;
   cursor: pointer;
@@ -187,62 +196,58 @@ main button {
 }
 
 #item-btn1 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn2 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn3 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn4 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn-main-off {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 
 #item-btn5 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn6 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn7 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn8 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn-monitor-off {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 
 #item-btn9 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn10 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn11 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn12 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 #item-btn13 {
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
 }
 
-
-
-/*
-* 右サイドバー内css
-*/
+/* 右サイドエリア */
 /* シャットダウンボタンcss */
 #item-shutdown-btn {
   border-radius: 5px;
-  background-color: rgba(128, 0, 0, 0.7);
+  background-color: rgb(128, 0, 0, 0.7);
   padding: 10px;
   margin: 10px;
   text-align: center;
@@ -253,9 +258,7 @@ main button {
   width: 70%;
 }
 
-/*
-* 音量スライダー＆文字css
-*/
+/* 音量スライダー＆文字css */
 .slider-wrapper {
   display: inline-block;
   width: 6em;
@@ -280,12 +283,10 @@ main button {
   transform: rotate(-90deg);
 }
 
-/*
-* ミュートボタンcss
-*/
+/* ミュートボタンcss */
 #item-audio-mute-btn {
   border-radius: 5px;
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
   padding: 1.5em 0;
   margin: 1em;
   text-align: center;
@@ -298,7 +299,7 @@ main button {
 
 #item-mic-mute-btn {
   border-radius: 5px;
-  background-color: rgba(0, 128, 0, 0.7);
+  background-color: rgb(0, 128, 0, 0.7);
   padding: 1.5em 0;
   margin: 1em;
   text-align: center;
@@ -309,14 +310,53 @@ main button {
   width: 30%;
 }
 
-
-
-
-/*
-* フッター文字css
-*/
+/* フッターエリア */
+/* フッター文字css */
 #footer-txt {
   text-indent: 1em;
 }
+
+/* シャットダウンページ */
+#shutdown-page {
+  display: none;
+}
+
+/*
+ * ポップアップページ
+ */
+/* シャットダウン確認 ポップアップページcss */
+#shutdown-cofirmation-popup {
+  display: none;
+}
+
+/* ダミー ポップアップページcss */
+#dummy-popup {
+  display: none;
+}
+
+/* 環境操作 ポップアップページcss */
+#environments-popup {
+  display: none;
+}
+
+/* 音量詳細 ポップアップページcss */
+#mic-details-popup {
+  display: none;
+}
+
+/* ブルーレイ操作 ポップアップページcss */
+#blu-ray-popup {
+  display: none;
+}
+
+/* カメラ操作 ポップアップページcss */
+#camera-popup {
+  display: none;
+}
+
+
+
+
+
 
 

@@ -10,6 +10,9 @@
   <body>
     <!-- スタートページ -->
     <div id="start-page">
+      <button type="button" id="item-start-btn">
+
+      </button>
     </div>
 
     <!-- スタートアップページ -->
@@ -24,28 +27,23 @@
           <p>Webアプリケーション</p>
         </header>
 
-        <!-- ナビゲーション -->
+        <!-- ナビゲーションエリア -->
         <nav>
           <p>ナビゲーション</p>
-          <button type="button" id="item-envronments-btn">
+          <button type="button" id="item-video-select-btn">
             映像選択
           </button>
 
-          <button type="button" id="item-envronments-btn">
+          <button type="button" id="item-audio-details-btn">
             音量詳細
           </button>
 
           <button type="button" id="item-envronments-btn">
             環境操作
           </button>
-
-
-
-
-
         </nav>
 
-        <!-- メイン -->
+        <!-- メインエリア -->
         <main>
           <div class="box29">
             <div class="box-title">メイン映像</div>
@@ -93,31 +91,168 @@
             </button>
           </div>
 
-          <div class="box29">
-            <div class="box-title">機器操作</div>
-            <button type="button" id="item-btn9">
-              ボタン<br>９
-            </button>
-
-            <button type="button" id="item-btn10">
-              ボタン<br>１０
-            </button>
-
-            <button type="button" id="item-btn11">
-              ボタン<br>１１
-            </button>
-
-            <button type="button" id="item-btn12">
-              ボタン<br>１２
-            </button>
-
-            <button type="button" id="item-btn13">
-              ボタン<br>１３
-            </button>
+          <!-- ダミーポップアップページ -->
+          <!-- 映像選択を行っているときはこのポップアップを表示して -->
+          <!-- ポップアップの領域を確保しておく -->
+          <div id="dummy-popup">
+            <div class="box30">
+              <div class="box-title">ダミーポップアップページ</div>
+              <button type="button" id="item-btn001">
+                001
+              </button>
+              <button type="button" id="item-btn002">
+                002
+              </button>
+              <button type="button" id="item-btn003">
+                003
+              </button>
+              <button type="button" id="item-btn004">
+                004
+              </button>
+              <button type="button" id="item-btn005">
+                005
+              </button>
+              <button type="button" id="item-btn006">
+                006
+              </button>
+              <button type="button" id="item-btn007">
+                007
+              </button>
+              <button type="button" id="item-btn008">
+                008
+              </button>
+              <button type="button" id="item-btn009">
+                009
+              </button>
+              <button type="button" id="item-btn010">
+                010
+              </button>
+              <button type="button" id="item-btn011">
+                011
+              </button>
+              <button type="button" id="item-btn012">
+                012
+              </button>
+              <button type="button" id="item-btn013">
+                013
+              </button>
+              <button type="button" id="item-btn014">
+                014
+              </button>
+              <button type="button" id="item-btn015">
+                015
+              </button>
+            </div>
           </div>
+
+          <!-- 音量詳細ポップアップページ -->
+          <div id="mic-details-popup">
+            <div class="box29">
+              <div class="box-title">音量詳細</div>
+              <button type="button" id="item-btn9">
+                ボタン<br>９
+              </button>
+
+              <button type="button" id="item-btn10">
+                ボタン<br>１０
+              </button>
+
+              <button type="button" id="item-btn11">
+                ボタン<br>１１
+              </button>
+
+              <button type="button" id="item-btn12">
+                ボタン<br>１２
+              </button>
+
+              <button type="button" id="item-btn13">
+                ボタン<br>１３
+              </button>
+            </div>
+          </div>
+
+          <!-- 環境操作ポップアップページ -->
+          <div id="environments-popup">
+            <div class="box29">
+              <div class="box-title">環境操作</div>
+              <button type="button" id="item-btn9">
+                ボタン<br>９
+              </button>
+
+              <button type="button" id="item-btn10">
+                ボタン<br>１０
+              </button>
+
+              <button type="button" id="item-btn11">
+                ボタン<br>１１
+              </button>
+
+              <button type="button" id="item-btn12">
+                ボタン<br>１２
+              </button>
+
+              <button type="button" id="item-btn13">
+                ボタン<br>１３
+              </button>
+            </div>
+          </div>
+
+
+          <!-- ブルーレイ操作ポップアップページ -->
+          <div id="blu-ray-popup">
+            <div class="box29">
+              <div class="box-title">Blu-ray操作</div>
+              <button type="button" id="item-btn9">
+                ボタン<br>９
+              </button>
+
+              <button type="button" id="item-btn10">
+                ボタン<br>１０
+              </button>
+
+              <button type="button" id="item-btn11">
+                ボタン<br>１１
+              </button>
+
+              <button type="button" id="item-btn12">
+                ボタン<br>１２
+              </button>
+
+              <button type="button" id="item-btn13">
+                ボタン<br>１３
+              </button>
+            </div>
+          </div>
+
+          <!-- カメラ操作ポップアップページ -->
+          <div id="camera-popup">
+            <div class="box29">
+              <div class="box-title">カメラ操作</div>
+              <button type="button" id="item-btn9">
+                ボタン<br>９
+              </button>
+
+              <button type="button" id="item-btn10">
+                ボタン<br>１０
+              </button>
+
+              <button type="button" id="item-btn11">
+                ボタン<br>１１
+              </button>
+
+              <button type="button" id="item-btn12">
+                ボタン<br>１２
+              </button>
+
+              <button type="button" id="item-btn13">
+                ボタン<br>１３
+              </button>
+            </div>
+          </div>
+
         </main>
 
-        <!-- サイド -->
+        <!-- サイドエリア -->
         <aside>
           <p>サイドエリア</p>
 
@@ -139,17 +274,17 @@
           <br>
 
           <button type="button" id="item-audio-mute-btn">
-            ＭＵＴＥ
+            MUTE
           </button>
 
           <button type="button" id="item-mic-mute-btn">
-            ＭＵＴＥ
+            MUTE
           </button>
 
 
         </aside>
 
-        <!-- フッター -->
+        <!-- フッターエリア -->
         <footer>
           <p id="footer-txt">Ready<p>
         </footer>
@@ -168,21 +303,6 @@
     <div id="mic-details-popup">
     </div>
 
-    <!-- プロジェクター操作ポップアップページ -->
-    <div id="vp-popup">
-    </div>
-
-    <!-- スクリーン操作ポップアップページ -->
-    <div id="screen-popup">
-    </div>
-
-    <!-- ブルーレイ操作ポップアップページ -->
-    <div id="blu-ray-popup">
-    </div>
-
-    <!-- カメラ操作ポップアップページ -->
-    <div id="blu-ray-popup">
-    </div>
 
     <!-- JavaScript -->
     <script src="js/jquery-3.5.1.min.js"></script>

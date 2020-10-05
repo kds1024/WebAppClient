@@ -21,17 +21,63 @@ ws.onclose = function(e) {
 }
 
 // ボタン１ イベントリスナー
-let btn = document.getElementById("item-btn1");
-// mouse down
-btn.addEventListener('mousedown', () => {
-  btn.style.backgroundColor='pink';
-  ws.send('mouse down')
+{
+  let btn = document.getElementById("item-btn1");
+  // mouse down
+  btn.addEventListener('mousedown', () => {
+    btn.style.backgroundColor='blue';
+    ws.send('mouse down')
+  }, false);
 
-}, false);
+  // mouse up
+  btn.addEventListener('mouseup', () => {
+    btn.style.backgroundColor='green';
+    btn.style.opacity='0.7';
+    ws.send('mouse up')
 
-// mouse up
-btn.addEventListener('mouseup', () => {
-  btn.style.backgroundColor='green';
-  ws.send('mouse up')
+  }, false);
+}
 
-}, false);
+// 映像選択ボタン イベントリスナー
+{
+  let btn = document.getElementById("item-video-select-btn");
+  // mouse click
+  btn.addEventListener('click', () => {
+    let micDetailPopup = document.getElementById("mic-details-popup");
+    let environmentsPopup = document.getElementById("environments-popup");
+    micDetailPopup.style.display = 'none';
+    environmentsPopup.style.display = 'none';
+  }, false);
+}
+
+// 音量詳細ボタン イベントリスナー
+{
+  let btn = document.getElementById("item-audio-details-btn");
+  // mouse click
+  btn.addEventListener('click', () => {
+    let micDetailPopup = document.getElementById("mic-details-popup");
+    let environmentsPopup = document.getElementById("environments-popup");
+    micDetailPopup.style.display = 'block';
+    environmentsPopup.style.display = 'none';
+  }, false);
+}
+
+// 環境操作ボタン イベントリスナー
+{
+  let btn = document.getElementById("item-envronments-btn");
+  // mouse click
+  btn.addEventListener('click', () => {
+    let micDetailPopup = document.getElementById("mic-details-popup");
+    let environmentsPopup = document.getElementById("environments-popup");
+    micDetailPopup.style.display = 'none';
+    environmentsPopup.style.display = 'block';
+  })
+}
+
+
+
+
+
+
+
+
