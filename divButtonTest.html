@@ -20,50 +20,40 @@
       }
 
       .container {
+        height: 100vh;
         display: grid;
-        grid-template-areas:
-          "header header"
-          "main sidebar"
-          "footer footer";
-        grid-template-rows: 80px auto 100px;
-        grid-template-columns: auto 200px;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(9,1fr);
         grid-gap: 10px;
+        grid-template-areas:
+          "header header header header header header header header header header header header header header header header"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
       }
       .header {
         grid-area: header;
         background-color: cadetblue;
       }
       .main {
-        text-align:center;
         grid-area: main;
         background-color: cadetblue;
+        text-align: center;
       }
       .sidebar {
         grid-area: sidebar;
         background-color: cadetblue;
         text-align: center;
 
-
-
       }
       .footer {
         grid-area: footer;
         background-color: cadetblue;
-      }
-
-      .base {
-        background-color: beige;
-        display: inline-block;
-        width: 50%;
-        margin: 0 auto;
-        height: 10em;
-      }
-
-      .arn {
-        background-color: silver;
-        display: inherit;
-        height: inherit;
-        margin: 0 10%;
       }
 
     </style>
@@ -77,16 +67,7 @@
       </header>
 
       <main class="main">
-
-        <dev class="base">
-          <dev class="arn">
-            領域A
-          </dev>
-          <dev class="arn">
-            領域B
-          </dev>
-        </dev>
-
+        メイン
       </main>
 
       <aside class="sidebar">
