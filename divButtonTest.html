@@ -20,40 +20,130 @@
       }
 
       .container {
-        height: 100vh;
         display: grid;
+        height: 95vh;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(9,1fr);
         grid-gap: 10px;
         grid-template-areas:
           "header header header header header header header header header header header header header header header header"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-          "main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
+          "main main main main main main main main main main main main main sidebar sidebar sidebar"
           "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
       }
       .header {
-        grid-area: header;
+        /* ヘッダーエリア定義 */
         background-color: cadetblue;
+        grid-area: header;
       }
       .main {
+        /* メインエリア定義 */
+        background-color: cadetblue;
         grid-area: main;
-        background-color: cadetblue;
-        text-align: center;
+        /* main-aエリア main-bエリア定義 */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+          "main-a"
+          "main-b";
       }
+
+      .main-a {
+        /* main-aエリア定義 */
+        /*background-color: silver;*/
+        grid-area: main-a;
+        /* main-a内のポップアップ定義 */
+        display: grid;
+        grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+      }
+      .main-a-popup {
+        /* ポップアップ領域定義 */
+        /*background-color: chocolate;*/
+        grid-area: 2/2/18/32;
+        /* main-a内のボタン領域定義 */
+        /* 上側にタイトルバーがあるのでそれを避ける位置で割り当てすること */
+        /*
+        display: grid;
+        grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+        */
+      }
+
+      .main-b {
+        /* main-bエリア定義 */
+        /*background-color: gray;*/
+        grid-area: main-b;
+        /* main-b内のポップアップ定義 */
+        display: grid;
+        grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+      }
+      .main-b-popup {
+        /* ポップアップ領域定義 */
+        /*background-color: chocolate;*/
+        grid-area: 2/2/18/32;
+      }
+
       .sidebar {
-        grid-area: sidebar;
+        /* サイドバーエリア定義 */
         background-color: cadetblue;
-        text-align: center;
+        grid-area: sidebar;
 
       }
       .footer {
-        grid-area: footer;
+        /* フッターエリア定義 */
         background-color: cadetblue;
+        grid-area: footer;
+      }
+
+      /*
+      * メインエリア *
+      * main-a main-b css
+      * メインエリアに表示する両方のポップアップページの
+      * 表示スタイルの設定
+      */
+      .main-popup-area {
+        /* コンテンツ */
+        background-color: rgb(220, 239, 255);
+        height: 100%;
+      }
+      .main-popup-area .box-title {
+        /* タイトル */
+        font-size: 1.2em;
+        background: #539bd3;
+        padding: 4px;
+        color: #FFF;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+      }
+
+      /* 操作選択なし ポップアップ表示・非表示 */
+      #none-cont-popup {
+        /* displayを inherit / none 切替で表示非表示切替 */
+        display: none;
+        height: 100%;
+      }
+
+      /* ＶＰ操作 ポップアップ表示・非表示 */
+      #vp-cont-popup {
+        /* displayを inherit / none 切替で表示非表示切替 */
+        display: inherit;
+        height: 100%;
+      }
+
+      /* スクリーン ポップアップ表示・非表示 */
+      #screen-cont-popup {
+        /* displayを inherit / none 切替で表示非表示切替 */
+        display: none;
+        height: 100%;
       }
 
     </style>
@@ -67,7 +157,46 @@
       </header>
 
       <main class="main">
-        メイン
+        <!-- メインエリア a -->
+        <dev class="main-a">
+          <dev class="main-a-popup">
+
+            <!-- 映像選択ポップアップ -->
+            <div class="main-popup-area">
+              <div class="box-title">映像選択</div>
+                ボタン
+
+            </div>
+
+
+
+
+
+          </dev>
+        </dev>
+
+        <!-- メインエリア b -->
+        <dev class="main-b">
+          <dev class="main-b-popup">
+
+            <!-- プロジェクター操作ポップアップ 表示・非表示 -->
+            <div id="vp-cont-popup">
+              <!-- プロジェクター操作ポップアップ -->
+              <div class="main-popup-area">
+                <div class="box-title">ＶＰ操作</div>
+                VP操作ボタン記述
+
+              </div>
+
+
+
+
+
+            </div>
+
+
+          </dev>
+        </dev>
       </main>
 
       <aside class="sidebar">
