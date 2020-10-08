@@ -19,7 +19,7 @@
         background-image: url(img/430995121-539072_3840x2160-48XV-1920x1080-MM-100.jpg);
       }
 
-      .container {
+      .body-container {
         display: grid;
         height: 95vh;
         grid-template-columns: repeat(16, 1fr);
@@ -41,7 +41,7 @@
         background-color: cadetblue;
         grid-area: header;
       }
-      .main {
+      .main-container {
         /* メインエリア定義 */
         background-color: cadetblue;
         grid-area: main;
@@ -55,7 +55,7 @@
           "main-b";
       }
 
-      .main-a {
+      .main-a-container {
         /* main-aエリア定義 */
         /*background-color: silver;*/
         grid-area: main-a;
@@ -77,7 +77,7 @@
         */
       }
 
-      .main-b {
+      .main-b-container {
         /* main-bエリア定義 */
         /*background-color: gray;*/
         grid-area: main-b;
@@ -151,14 +151,16 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="body-container">
+
       <header class="header">
         ヘッダー
       </header>
 
-      <main class="main">
+      <main class="main-container">
+
         <!-- メインエリア a -->
-        <dev class="main-a">
+        <dev class="main-a-container">
           <dev class="main-a-popup">
 
             <!-- 映像選択ポップアップ -->
@@ -176,7 +178,7 @@
         </dev>
 
         <!-- メインエリア b -->
-        <dev class="main-b">
+        <dev class="main-b-container">
           <dev class="main-b-popup">
 
             <!-- プロジェクター操作ポップアップ 表示・非表示 -->
