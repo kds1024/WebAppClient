@@ -2701,15 +2701,15 @@ function selectRadio39() {
     sendCommand39("set_channel+21", function(){});
 }
 
+
 window.onload = function() {
-    //3000ミリ秒毎に関数getChannelを呼び出す
-    setInterval("getChannel()", 500);
+  //3000ミリ秒毎に関数getChannelを呼び出す
+  //setInterval("getChannel()", 3000);
 }
-
-
 
 function getChannel() {
   sendCommand("get_channel", function(result) {
+    console.log("result", result);
     for (i = 0; i < 21; i++)
       document.fm1.radio_ch[i].checked = (i+1 == Number(result));
   });
