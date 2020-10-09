@@ -45,68 +45,66 @@
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: 1fr;
         grid-template-areas:
-          "header-title-area"
+          "header-title-txt-area"
           "header-video-btn-area"
-          "header-vp-btn-area"
+          "header-pj-btn-area"
           "header-screen-btn-area"
           "header-end-btn-area";
       }
-      #header-titletxt-area {
+      #header-title-txt-area {
         grid-area: 1/1/2/5;
         display: flex;
         /*justify-content: center;*/
         align-items: center;
       }
 
-      #header-videobtn-area {
+      #header-video-btn-area {
         grid-area: 1/6/2/8;
         margin: 5% 5%;
         display: flex;
         /*justify-content: center;*/
         align-items: center;
       }
-      #header-videobtn-item {
+      #header-video-btn-item {
         width: 100%;
         height: 100%;
       }
 
-      #header-pjbtn-area {
+      #header-pj-btn-area {
         grid-area: 1/9/2/11;
         margin: 5% 5%;
         display: flex;
         /*justify-content: center;*/
         align-items: center;
       }
-      #header-pjbtn-item {
+      #header-pj-btn-item {
         width: 100%;
         height: 100%;
       }
 
-      #header-screenbtn-area {
+      #header-screen-btn-area {
         grid-area: 1/12/2/14;
         margin: 5% 5%;
         display: flex;
         /*justify-content: center;*/
         align-items: center;
       }
-      #header-screenbtn-item {
+      #header-screen-btn-item {
         width: 100%;
         height: 100%;
       }
 
-      #header-endbtn-area {
+      #header-end-btn-area {
         grid-area: 1/15/2/17;
         margin: 5% 5%;
         display: flex;
         /*justify-content: center;*/
         align-items: center;
       }
-      #header-endbtn-item {
+      #header-end-btn-item {
         width: 100%;
         height: 100%;
       }
-
-
 
       .main-container {
         /* メインエリア定義 */
@@ -118,14 +116,14 @@
         grid-template-rows: 1fr 1fr;
         grid-gap: 10px;
         grid-template-areas:
-          "main-a"
-          "main-b";
+          "main-video-select-container"
+          "main-env-cont-container";
       }
 
-      .main-a-container {
+      .main-video-select-container {
         /* main-aエリア定義 */
         /*background-color: silver;*/
-        grid-area: main-a;
+        grid-area: main-video-select-container;
         /* main-a内のポップアップ定義 */
         display: grid;
         grid-template-columns: repeat(32, 1fr);
@@ -144,10 +142,10 @@
         */
       }
 
-      .main-b-container {
+      .main-env-cont-container {
         /* main-bエリア定義 */
         /*background-color: gray;*/
-        grid-area: main-b;
+        grid-area: main-env-cont-container;
         /* main-b内のポップアップ定義 */
         display: grid;
         grid-template-columns: repeat(32, 1fr);
@@ -217,67 +215,44 @@
 
   </head>
   <body>
-
     <div class="body-container">
 
       <header class="header">
-        <dev id="header-titletxt-area">
+        <dev id="header-title-txt-area">
           部屋名orタイトル
         </dev>
-        <dev id="header-videobtn-area">
-          <button id="header-videobtn-item">映像選択</button>
+        <dev id="header-video-btn-area">
+          <button id="header-video-btn-item">映像選択</button>
         </dev>
-        <dev id="header-pjbtn-area">
-          <button id="header-pjbtn-item">ＶＰ操作</button>
+        <dev id="header-pj-btn-area">
+          <button id="header-pj-btn-item">ＶＰ操作</button>
         </dev>
-        <dev id="header-screenbtn-area">
-          <button id="header-screenbtn-item">スクリーン操作</button>
+        <dev id="header-screen-btn-area">
+          <button id="header-screen-btn-item">スクリーン操作</button>
         </dev>
-        <dev id="header-endbtn-area">
-          <button id="header-endbtn-item">システム終了</button>
+        <dev id="header-end-btn-area">
+          <button id="header-end-btn-item">システム終了</button>
         </dev>
       </header>
 
       <main class="main-container">
-
-        <!-- メインエリア a -->
-        <dev class="main-a-container">
-          <dev class="main-a-popup">
-
-            <!-- 映像選択ポップアップ -->
-            <div class="main-popup-area">
-              <div class="box-title">映像選択</div>
-                ボタン
-
-            </div>
-
-
-
-
-
-          </dev>
+        <dev class="main-video-select-container">
+          <div class="main-popup-area">
+            <div class="box-title">映像選択</div>
+              ボタン
+          </div>
         </dev>
 
-        <!-- メインエリア b -->
-        <dev class="main-b-container">
+        <dev class="main-env-cont-container">
           <dev class="main-b-popup">
-
             <!-- プロジェクター操作ポップアップ 表示・非表示 -->
             <div id="vp-cont-popup">
               <!-- プロジェクター操作ポップアップ -->
               <div class="main-popup-area">
                 <div class="box-title">ＶＰ操作</div>
                 VP操作ボタン記述
-
               </div>
-
-
-
-
-
             </div>
-
-
           </dev>
         </dev>
       </main>
