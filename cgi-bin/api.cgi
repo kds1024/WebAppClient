@@ -9,18 +9,38 @@ print"\n";
 use CGI;
 my $cgi = CGI::new();
 
+# key値取得
+# ?cmd=set_channel+1の set_channel+1 を取得する
+$value = $cgi->param('cmd');  # + はスペースに変換される
+# スペースでスプリット
+($command, $number) = split(/ /, $value);
 
+# キー値をチェック
+if ($command == 'get_channel') {
+  #ファイルの有無確認
+  if (-f "$ENV{'REMOTE_ADDR'}".'.txt') {
+    #ファイル読み込み処理
+    open(my $fh, '<:utf8', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't oepn file: $!";
+    while (my $line = <$fh>) {
+      chomp($line); #\n削除
+      print "$line";
+    }
+    close($fh);
+  }
+  else {
+    #ファイルが存在しない時の処理
+    print '0';
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+if ($command == 'set_channel') {
+  # ファイルの書き込み
+  if (defined $number){
+    open(my $fh, '>:utf8', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't open file: $!";
+    print $fh "$number\n";
+    close($fh);
+  }
+}
 
 
 
@@ -51,10 +71,10 @@ my $cgi = CGI::new();
 # クエリを取得 ?以降の文字列取得
 #print $ENV{'QUERY_STRING'};
 
-$buffer = $ENV{'QUERY_STRING'};
+#$buffer = $ENV{'QUERY_STRING'};
 #print "$buffer\n";
 
-($name, $value) = split(/=/, $buffer);
+#($name, $value) = split(/=/, $buffer);
 #print "$name\n";
 #print "$value\n";
 
@@ -66,7 +86,7 @@ $buffer = $ENV{'QUERY_STRING'};
 #print "$number\n";
 
 # メタキャラ「+」をエスケープして「+」と認識させてスプリットする 「\+」と記述する 
-($command, $number) = split(/\+/, $value);
+#($command, $number) = split(/\+/, $value);
 #print "$command\n";
 #print "$number\n";
 

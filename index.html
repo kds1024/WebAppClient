@@ -44,6 +44,15 @@
   const cmd_prefix38 = "http://192.168.1.88/cgi-bin/api.cgi?cmd=";
   const cmd_prefix39 = "http://192.168.1.89/cgi-bin/api.cgi?cmd=";
 
+  const clickWaitTime = 1000;
+  let updateWait = false;
+
+  // ラジオボタンクリック後 updateWait = true にセットして setTimeout関数起動
+  // タイムアップで clrUpdateWait を呼んで updateWait = false をセット
+  function clrUpdateWait() {
+    updateWait = false;
+  }
+
   function sendCommand(cmd, callback) {
     let url = cmd_prefix + cmd;
     let xhr = new XMLHttpRequest();
@@ -943,7 +952,14 @@ function sendCommand39(cmd, callback) {
   xhr.send();
 }
 
+
+
+
 function selectRadio() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm1.radio_ch[0].checked)
     sendCommand("set_channel+1", function(){});
   if (document.fm1.radio_ch[1].checked)
@@ -988,8 +1004,11 @@ function selectRadio() {
     sendCommand("set_channel+21", function(){});
 }
 
-
 function selectRadio2() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm2.radio_ch[0].checked)
     sendCommand2("set_channel+1", function(){});
   if (document.fm2.radio_ch[1].checked)
@@ -1035,6 +1054,10 @@ function selectRadio2() {
 }
 
 function selectRadio3() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm3.radio_ch[0].checked)
     sendCommand3("set_channel+1", function(){});
   if (document.fm3.radio_ch[1].checked)
@@ -1080,6 +1103,10 @@ function selectRadio3() {
 }
 
 function selectRadio4() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm4.radio_ch[0].checked)
     sendCommand4("set_channel+1", function(){});
   if (document.fm4.radio_ch[1].checked)
@@ -1125,6 +1152,10 @@ function selectRadio4() {
 }
 
 function selectRadio5() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm5.radio_ch[0].checked)
     sendCommand5("set_channel+1", function(){});
   if (document.fm5.radio_ch[1].checked)
@@ -1170,6 +1201,10 @@ function selectRadio5() {
 }
 
 function selectRadio6() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm6.radio_ch[0].checked)
     sendCommand6("set_channel+1", function(){});
   if (document.fm6.radio_ch[1].checked)
@@ -1215,6 +1250,10 @@ function selectRadio6() {
 }
 
 function selectRadio7() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm7.radio_ch[0].checked)
     sendCommand7("set_channel+1", function(){});
   if (document.fm7.radio_ch[1].checked)
@@ -1260,6 +1299,10 @@ function selectRadio7() {
 }
 
 function selectRadio8() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm8.radio_ch[0].checked)
     sendCommand8("set_channel+1", function(){});
   if (document.fm8.radio_ch[1].checked)
@@ -1305,6 +1348,10 @@ function selectRadio8() {
 }
 
 function selectRadio9() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm9.radio_ch[0].checked)
     sendCommand9("set_channel+1", function(){});
   if (document.fm9.radio_ch[1].checked)
@@ -1351,6 +1398,10 @@ function selectRadio9() {
 
 
 function selectRadio10() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm10.radio_ch[0].checked)
     sendCommand10("set_channel+1", function(){});
   if (document.fm10.radio_ch[1].checked)
@@ -1396,6 +1447,10 @@ function selectRadio10() {
 }
 
 function selectRadio11() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm11.radio_ch[0].checked)
     sendCommand11("set_channel+1", function(){});
   if (document.fm11.radio_ch[1].checked)
@@ -1442,6 +1497,10 @@ function selectRadio11() {
 
 
 function selectRadio12() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm12.radio_ch[0].checked)
     sendCommand12("set_channel+1", function(){});
   if (document.fm12.radio_ch[1].checked)
@@ -1487,6 +1546,10 @@ function selectRadio12() {
 }
 
 function selectRadio13() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm13.radio_ch[0].checked)
     sendCommand13("set_channel+1", function(){});
   if (document.fm13.radio_ch[1].checked)
@@ -1532,6 +1595,10 @@ function selectRadio13() {
 }
 
 function selectRadio14() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm14.radio_ch[0].checked)
     sendCommand14("set_channel+1", function(){});
   if (document.fm14.radio_ch[1].checked)
@@ -1577,6 +1644,10 @@ function selectRadio14() {
 }
 
 function selectRadio15() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm15.radio_ch[0].checked)
     sendCommand15("set_channel+1", function(){});
   if (document.fm15.radio_ch[1].checked)
@@ -1622,6 +1693,10 @@ function selectRadio15() {
 }
 
 function selectRadio16() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm16.radio_ch[0].checked)
     sendCommand16("set_channel+1", function(){});
   if (document.fm16.radio_ch[1].checked)
@@ -1667,6 +1742,10 @@ function selectRadio16() {
 }
 
 function selectRadio17() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm17.radio_ch[0].checked)
     sendCommand17("set_channel+1", function(){});
   if (document.fm17.radio_ch[1].checked)
@@ -1712,6 +1791,10 @@ function selectRadio17() {
 }
 
 function selectRadio18() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm18.radio_ch[0].checked)
     sendCommand18("set_channel+1", function(){});
   if (document.fm18.radio_ch[1].checked)
@@ -1757,6 +1840,10 @@ function selectRadio18() {
 }
 
 function selectRadio19() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm19.radio_ch[0].checked)
     sendCommand19("set_channel+1", function(){});
   if (document.fm19.radio_ch[1].checked)
@@ -1802,6 +1889,10 @@ function selectRadio19() {
 }
 
 function selectRadio20() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm20.radio_ch[0].checked)
     sendCommand20("set_channel+1", function(){});
   if (document.fm20.radio_ch[1].checked)
@@ -1847,6 +1938,10 @@ function selectRadio20() {
 }
 
 function selectRadio21() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm21.radio_ch[0].checked)
     sendCommand21("set_channel+1", function(){});
   if (document.fm21.radio_ch[1].checked)
@@ -1892,6 +1987,10 @@ function selectRadio21() {
 }
 
 function selectRadio22() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm22.radio_ch[0].checked)
     sendCommand22("set_channel+1", function(){});
   if (document.fm22.radio_ch[1].checked)
@@ -1937,6 +2036,10 @@ function selectRadio22() {
 }
 
 function selectRadio23() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm23.radio_ch[0].checked)
     sendCommand23("set_channel+1", function(){});
   if (document.fm23.radio_ch[1].checked)
@@ -1982,6 +2085,10 @@ function selectRadio23() {
 }
 
 function selectRadio24() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm24.radio_ch[0].checked)
     sendCommand24("set_channel+1", function(){});
   if (document.fm24.radio_ch[1].checked)
@@ -2027,6 +2134,10 @@ function selectRadio24() {
 }
 
 function selectRadio25() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm25.radio_ch[0].checked)
     sendCommand25("set_channel+1", function(){});
   if (document.fm25.radio_ch[1].checked)
@@ -2072,6 +2183,10 @@ function selectRadio25() {
 }
 
 function selectRadio26() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm26.radio_ch[0].checked)
     sendCommand26("set_channel+1", function(){});
   if (document.fm26.radio_ch[1].checked)
@@ -2117,6 +2232,10 @@ function selectRadio26() {
 }
 
 function selectRadio27() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm27.radio_ch[0].checked)
     sendCommand27("set_channel+1", function(){});
   if (document.fm27.radio_ch[1].checked)
@@ -2162,6 +2281,10 @@ function selectRadio27() {
 }
 
 function selectRadio28() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm28.radio_ch[0].checked)
     sendCommand28("set_channel+1", function(){});
   if (document.fm28.radio_ch[1].checked)
@@ -2207,6 +2330,10 @@ function selectRadio28() {
 }
 
 function selectRadio29() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm29.radio_ch[0].checked)
     sendCommand29("set_channel+1", function(){});
   if (document.fm29.radio_ch[1].checked)
@@ -2252,6 +2379,10 @@ function selectRadio29() {
 }
 
 function selectRadio30() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm30.radio_ch[0].checked)
     sendCommand30("set_channel+1", function(){});
   if (document.fm30.radio_ch[1].checked)
@@ -2297,6 +2428,10 @@ function selectRadio30() {
 }
 
 function selectRadio31() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm31.radio_ch[0].checked)
     sendCommand31("set_channel+1", function(){});
   if (document.fm31.radio_ch[1].checked)
@@ -2342,6 +2477,10 @@ function selectRadio31() {
 }
 
 function selectRadio32() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm32.radio_ch[0].checked)
     sendCommand32("set_channel+1", function(){});
   if (document.fm32.radio_ch[1].checked)
@@ -2387,6 +2526,10 @@ function selectRadio32() {
 }
 
 function selectRadio33() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm33.radio_ch[0].checked)
     sendCommand33("set_channel+1", function(){});
   if (document.fm33.radio_ch[1].checked)
@@ -2432,6 +2575,10 @@ function selectRadio33() {
 }
 
 function selectRadio34() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm34.radio_ch[0].checked)
     sendCommand34("set_channel+1", function(){});
   if (document.fm34.radio_ch[1].checked)
@@ -2477,6 +2624,10 @@ function selectRadio34() {
 }
 
 function selectRadio35() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm35.radio_ch[0].checked)
     sendCommand35("set_channel+1", function(){});
   if (document.fm35.radio_ch[1].checked)
@@ -2522,6 +2673,10 @@ function selectRadio35() {
 }
 
 function selectRadio36() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm36.radio_ch[0].checked)
     sendCommand36("set_channel+1", function(){});
   if (document.fm36.radio_ch[1].checked)
@@ -2567,6 +2722,10 @@ function selectRadio36() {
 }
 
 function selectRadio37() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm37.radio_ch[0].checked)
     sendCommand37("set_channel+1", function(){});
   if (document.fm37.radio_ch[1].checked)
@@ -2612,6 +2771,10 @@ function selectRadio37() {
 }
 
 function selectRadio38() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm38.radio_ch[0].checked)
     sendCommand38("set_channel+1", function(){});
   if (document.fm38.radio_ch[1].checked)
@@ -2657,6 +2820,10 @@ function selectRadio38() {
 }
 
 function selectRadio39() {
+  // ラジオボタンクリック更新待ちタイマーセット
+  updateWait = true;
+  setTimeout(clrUpdateWait, clickWaitTime);
+
   if (document.fm39.radio_ch[0].checked)
     sendCommand39("set_channel+1", function(){});
   if (document.fm39.radio_ch[1].checked)
@@ -2701,207 +2868,284 @@ function selectRadio39() {
     sendCommand39("set_channel+21", function(){});
 }
 
-
 window.onload = function() {
   //3000ミリ秒毎に関数getChannelを呼び出す
-  //setInterval("getChannel()", 3000);
+  setInterval("getChannel()", 1000);
 }
 
 function getChannel() {
+
   sendCommand("get_channel", function(result) {
-    console.log("result", result);
-    for (i = 0; i < 21; i++)
-      document.fm1.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm1.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand2("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm2.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm2.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand3("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm3.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm3.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand4("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm4.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm4.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand5("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm5.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm5.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand6("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm6.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm6.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand7("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm7.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm7.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand8("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm8.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm8.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand9("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm9.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm9.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand10("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm10.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm10.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand11("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm11.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm11.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand12("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm12.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm12.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand13("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm13.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm13.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand14("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm14.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm14.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand15("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm15.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm15.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand16("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm16.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm16.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand17("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm17.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm17.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand18("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm18.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm18.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand19("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm19.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm19.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand20("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm20.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm20.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand21("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm21.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm21.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand22("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm22.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm22.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand23("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm23.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm23.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand24("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm24.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm24.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand25("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm25.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm25.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand26("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm26.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm26.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand27("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm27.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm27.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand28("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm28.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm28.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand29("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm29.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm29.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand30("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm30.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm30.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand31("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm31.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm31.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand32("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm32.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm32.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand33("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm33.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm33.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand34("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm34.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm34.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand35("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm35.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm35.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand36("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm36.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm36.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand37("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm37.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm37.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand38("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm38.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm38.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 
   sendCommand39("get_channel", function(result) {
-    for (i = 0; i < 21; i++)
-      document.fm39.radio_ch[i].checked = (i+1 == Number(result));
+    for (i = 0; i < 21; i++) {
+      if (updateWait === false)
+        document.fm39.radio_ch[i].checked = (i+1 == Number(result));
+    }
   });
 }
 </script>
