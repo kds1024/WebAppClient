@@ -46,12 +46,7 @@
 
   const clickWaitTime = 1000;
   let updateWait = false;
-
-  // ラジオボタンクリック後 updateWait = true にセットして setTimeout関数起動
-  // タイムアップで clrUpdateWait を呼んで updateWait = false をセット
-  function clrUpdateWait() {
-    updateWait = false;
-  }
+  let timerId = null;
 
   function sendCommand(cmd, callback) {
     let url = cmd_prefix + cmd;
@@ -952,13 +947,32 @@ function sendCommand39(cmd, callback) {
   xhr.send();
 }
 
+// ラジオボタンクリック後 updateWait = true にセットして setTimeout関数起動
+// タイムアップで clrUpdateWait を呼んで updateWait = false をセット
+function clrUpdateWait() {
+  updateWait = false;
+  timerId = null;
+}
 
+function setUpdateWait() {
+  updateWait = true;
+
+  if (timerId === null) {
+    // タイマー起動
+    timerId = setTimeout(clrUpdateWait, clickWaitTime);
+  }
+  else {
+    // すでにタイマーが起動されていたら今のタイマーをクリアして新たに
+    // タイマーをセットする
+    clearTimeout(timerId);
+    timerId = setTimeout(clrUpdateWait, clickWaitTime);
+  }
+}
 
 
 function selectRadio() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm1.radio_ch[0].checked)
     sendCommand("set_channel+1", function(){});
@@ -1006,8 +1020,7 @@ function selectRadio() {
 
 function selectRadio2() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm2.radio_ch[0].checked)
     sendCommand2("set_channel+1", function(){});
@@ -1055,8 +1068,7 @@ function selectRadio2() {
 
 function selectRadio3() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm3.radio_ch[0].checked)
     sendCommand3("set_channel+1", function(){});
@@ -1104,8 +1116,7 @@ function selectRadio3() {
 
 function selectRadio4() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm4.radio_ch[0].checked)
     sendCommand4("set_channel+1", function(){});
@@ -1153,8 +1164,7 @@ function selectRadio4() {
 
 function selectRadio5() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm5.radio_ch[0].checked)
     sendCommand5("set_channel+1", function(){});
@@ -1202,8 +1212,7 @@ function selectRadio5() {
 
 function selectRadio6() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm6.radio_ch[0].checked)
     sendCommand6("set_channel+1", function(){});
@@ -1251,8 +1260,7 @@ function selectRadio6() {
 
 function selectRadio7() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm7.radio_ch[0].checked)
     sendCommand7("set_channel+1", function(){});
@@ -1300,8 +1308,7 @@ function selectRadio7() {
 
 function selectRadio8() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm8.radio_ch[0].checked)
     sendCommand8("set_channel+1", function(){});
@@ -1349,8 +1356,7 @@ function selectRadio8() {
 
 function selectRadio9() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm9.radio_ch[0].checked)
     sendCommand9("set_channel+1", function(){});
@@ -1399,8 +1405,7 @@ function selectRadio9() {
 
 function selectRadio10() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm10.radio_ch[0].checked)
     sendCommand10("set_channel+1", function(){});
@@ -1448,8 +1453,7 @@ function selectRadio10() {
 
 function selectRadio11() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm11.radio_ch[0].checked)
     sendCommand11("set_channel+1", function(){});
@@ -1498,8 +1502,7 @@ function selectRadio11() {
 
 function selectRadio12() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm12.radio_ch[0].checked)
     sendCommand12("set_channel+1", function(){});
@@ -1547,8 +1550,7 @@ function selectRadio12() {
 
 function selectRadio13() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm13.radio_ch[0].checked)
     sendCommand13("set_channel+1", function(){});
@@ -1596,8 +1598,7 @@ function selectRadio13() {
 
 function selectRadio14() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm14.radio_ch[0].checked)
     sendCommand14("set_channel+1", function(){});
@@ -1645,8 +1646,7 @@ function selectRadio14() {
 
 function selectRadio15() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm15.radio_ch[0].checked)
     sendCommand15("set_channel+1", function(){});
@@ -1694,8 +1694,7 @@ function selectRadio15() {
 
 function selectRadio16() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm16.radio_ch[0].checked)
     sendCommand16("set_channel+1", function(){});
@@ -1743,8 +1742,7 @@ function selectRadio16() {
 
 function selectRadio17() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm17.radio_ch[0].checked)
     sendCommand17("set_channel+1", function(){});
@@ -1792,8 +1790,7 @@ function selectRadio17() {
 
 function selectRadio18() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm18.radio_ch[0].checked)
     sendCommand18("set_channel+1", function(){});
@@ -1841,8 +1838,7 @@ function selectRadio18() {
 
 function selectRadio19() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm19.radio_ch[0].checked)
     sendCommand19("set_channel+1", function(){});
@@ -1890,8 +1886,7 @@ function selectRadio19() {
 
 function selectRadio20() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm20.radio_ch[0].checked)
     sendCommand20("set_channel+1", function(){});
@@ -1939,8 +1934,7 @@ function selectRadio20() {
 
 function selectRadio21() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm21.radio_ch[0].checked)
     sendCommand21("set_channel+1", function(){});
@@ -1988,8 +1982,7 @@ function selectRadio21() {
 
 function selectRadio22() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm22.radio_ch[0].checked)
     sendCommand22("set_channel+1", function(){});
@@ -2037,8 +2030,7 @@ function selectRadio22() {
 
 function selectRadio23() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm23.radio_ch[0].checked)
     sendCommand23("set_channel+1", function(){});
@@ -2086,8 +2078,7 @@ function selectRadio23() {
 
 function selectRadio24() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm24.radio_ch[0].checked)
     sendCommand24("set_channel+1", function(){});
@@ -2135,8 +2126,7 @@ function selectRadio24() {
 
 function selectRadio25() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm25.radio_ch[0].checked)
     sendCommand25("set_channel+1", function(){});
@@ -2184,8 +2174,7 @@ function selectRadio25() {
 
 function selectRadio26() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm26.radio_ch[0].checked)
     sendCommand26("set_channel+1", function(){});
@@ -2233,8 +2222,7 @@ function selectRadio26() {
 
 function selectRadio27() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm27.radio_ch[0].checked)
     sendCommand27("set_channel+1", function(){});
@@ -2282,8 +2270,7 @@ function selectRadio27() {
 
 function selectRadio28() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm28.radio_ch[0].checked)
     sendCommand28("set_channel+1", function(){});
@@ -2331,8 +2318,7 @@ function selectRadio28() {
 
 function selectRadio29() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm29.radio_ch[0].checked)
     sendCommand29("set_channel+1", function(){});
@@ -2380,8 +2366,7 @@ function selectRadio29() {
 
 function selectRadio30() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm30.radio_ch[0].checked)
     sendCommand30("set_channel+1", function(){});
@@ -2429,8 +2414,7 @@ function selectRadio30() {
 
 function selectRadio31() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm31.radio_ch[0].checked)
     sendCommand31("set_channel+1", function(){});
@@ -2478,8 +2462,7 @@ function selectRadio31() {
 
 function selectRadio32() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm32.radio_ch[0].checked)
     sendCommand32("set_channel+1", function(){});
@@ -2527,8 +2510,7 @@ function selectRadio32() {
 
 function selectRadio33() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm33.radio_ch[0].checked)
     sendCommand33("set_channel+1", function(){});
@@ -2576,8 +2558,7 @@ function selectRadio33() {
 
 function selectRadio34() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm34.radio_ch[0].checked)
     sendCommand34("set_channel+1", function(){});
@@ -2625,8 +2606,7 @@ function selectRadio34() {
 
 function selectRadio35() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm35.radio_ch[0].checked)
     sendCommand35("set_channel+1", function(){});
@@ -2674,8 +2654,7 @@ function selectRadio35() {
 
 function selectRadio36() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm36.radio_ch[0].checked)
     sendCommand36("set_channel+1", function(){});
@@ -2723,8 +2702,7 @@ function selectRadio36() {
 
 function selectRadio37() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm37.radio_ch[0].checked)
     sendCommand37("set_channel+1", function(){});
@@ -2772,8 +2750,7 @@ function selectRadio37() {
 
 function selectRadio38() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm38.radio_ch[0].checked)
     sendCommand38("set_channel+1", function(){});
@@ -2821,8 +2798,7 @@ function selectRadio38() {
 
 function selectRadio39() {
   // ラジオボタンクリック更新待ちタイマーセット
-  updateWait = true;
-  setTimeout(clrUpdateWait, clickWaitTime);
+  setUpdateWait();
 
   if (document.fm39.radio_ch[0].checked)
     sendCommand39("set_channel+1", function(){});
