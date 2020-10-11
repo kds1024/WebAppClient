@@ -20,7 +20,7 @@ if ($command == 'get_channel') {
   #ファイルの有無確認
   if (-f "$ENV{'REMOTE_ADDR'}".'.txt') {
     #ファイル読み込み処理
-    open(my $fh, '<:utf8', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't oepn file: $!";
+    open(my $fh, '<', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't oepn file: $!";
     while (my $line = <$fh>) {
       chomp($line); #\n削除
       print "$line";
@@ -36,7 +36,7 @@ if ($command == 'get_channel') {
 if ($command == 'set_channel') {
   # ファイルの書き込み
   if (defined $number){
-    open(my $fh, '>:utf8', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't open file: $!";
+    open(my $fh, '>', "$ENV{'REMOTE_ADDR'}".'.txt') or die "Can't open file: $!";
     print $fh "$number\n";
     close($fh);
   }
