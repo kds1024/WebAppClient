@@ -8,52 +8,23 @@
   */
 }
 
+html {
+}
+
 body {
-  background-image: url("/img/3722440067-1872285-vgqM-1920x1080-MM-100.jpg");
-}
-
-.page-size {
   /*
-  width: 100%;
-  height: 100vh;
-  background: blue;
+  background-image: url("/img/3722440067-1872285-vgqM-1920x1080-MM-100.jpg");
   */
+  background-color: cadetblue;
 }
 
-#top p {
-  background-color: cornflowerblue;
-  color: whitesmoke;
-  border-left: solid 1.5em white;
-  border-bottom: solid 1px white;
+figure {
+  float: left;
 }
 
-#div-only1 {
-  background-color: skyblue;
-  color: darkslategray;
-}
-#div-only2 {
-  background-color: skyblue;
-  color: darkslategray;
-}
-#div-only3 {
-  background-color: skyblue;
-  color: darkslategray;
-}
 
-.parent {
-  background: silver;
-  width: 250px;
-}
-.parent p {
-  text-align: center;
-  background: orange;
 
-}
 
-#last p {
-  background-color: green;
-  color: white;
-}
 
 
 
