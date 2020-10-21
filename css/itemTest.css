@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 /* 自動で付く余白をリセット */
+/*
 *{
-  /*
   padding: 0;
   margin: auto;
-  */
 }
+*/
 
 html {
 }
@@ -15,8 +15,34 @@ body {
   /*
   background-image: url("/img/3722440067-1872285-vgqM-1920x1080-MM-100.jpg");
   */
-  background-color: cadetblue;
+  background-color: royalblue;
+  /*
+  padding: 1em;
+  margin: auto;
+  */
 }
+
+p {
+  background-color: white;
+  /*
+  border-style: solid;
+  border-color: steelblue;
+  border-width: 20px;
+  margin: auto;
+  padding: 1em;
+  */
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
