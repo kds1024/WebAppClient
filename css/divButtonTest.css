@@ -40,12 +40,14 @@ header {
 header p {
   background-color: green;
   grid-column: 1 / span 4;
-
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 header button {
   background-color: green;
   grid-column: 15 / span 2;
+  margin: 8px;
 }
 
 
