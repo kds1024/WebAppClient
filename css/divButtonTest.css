@@ -23,38 +23,84 @@ body {
 .body-container {
   height: inherit;
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 10fr 1fr;
-  grid-gap: 10px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 8px;
 }
-
 
 header {
   /* ヘッダーエリア定義 */
   background-color: royalblue;
-  grid-column: 1/span 2;
-  grid-row: 1/span 1;
+  grid-column: 1 / span 16;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+/* タイトルエリア */
+header p {
+  background-color: green;
+  grid-column: 1 / span 4;
+
+}
+
+header button {
+  background-color: green;
+  grid-column: 15 / span 2;
+}
+
+
+
+nav {
+  /* ナビゲーション */
+  background-color: royalblue;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 7;
 
 }
 
 main {
   /* メインエリア定義 */
   background-color: royalblue;
-  grid-column: 1/span 1;
-  grid-row: 2/span 1;
+  grid-column: 4 / span 10;
+  grid-row: 2 / span 7;
 }
 
 aside {
   /* サイドバーエリア定義 */
   background-color: royalblue;
-  grid-column: 2/span 1;
-  grid-row: 2/span 1;
+  grid-column: 14 / span 3;
+  grid-row: 2 / span 7;
 
 }
 footer {
   /* フッターエリア定義 */
   background-color: royalblue;
-  grid-column: 1/span 2;
-  grid-row: 3/span 1;
+  grid-column: 1 / span 16;
+  grid-row: 9 / span 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
