@@ -1,12 +1,20 @@
 @charset "utf-8";
 
-/* 自動で付く余白をリセット */
-/*
+/* html文書共通設定 */
 *{
-padding: 0;
-margin: auto;
+  padding: 0;
+  margin: 0;
+  color: white;
 }
-*/
+
+/* ボタン共通設定 */
+button {
+  outline: none;
+  border-style: none;
+  margin: 8px;
+  background-color: gray;
+}
+
 
 html {
   height: 100%;
@@ -14,12 +22,9 @@ html {
 
 
 body {
-  margin: auto;
-  height: inherit;
+  height: 100%;
   font-family: sans-serif;
-  /*
   background-image: url("/img/430995121-539072_3840x2160-48XV-1920x1080-MM-100.jpg");
-  */
 }
 
 .body-container {
@@ -28,6 +33,7 @@ body {
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(9, 1fr);
   grid-gap: 8px;
+  opacity: 0.7;
 }
 
 header {
@@ -41,53 +47,95 @@ header {
 }
 
 /* タイトルエリア */
-body div header p {
+header p {
   background-color: gray;
   grid-column: 1 / span 8;
   grid-row: 1 / span 1;
   margin: auto 0;
 }
 
-body div header button {
-  background-color: gray;
-  grid-column: 14 / span 2;
+header button {
+  /* ヘッダーエリア */
+  grid-column: 15 / span 2;
   grid-row: 1 / span 1;
-  margin: 8px;
 }
 
 
-
+/* ナビゲーションエリア定義 */
 nav {
-  /* ナビゲーション */
   background-color: royalblue;
   grid-column: 1 / span 3;
   grid-row: 2 / span 7;
-
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 
+
+/* メインエリア定義 */
 main {
-  /* メインエリア定義 */
   background-color: royalblue;
   grid-column: 4 / span 10;
   grid-row: 2 / span 7;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
+.upper-area {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.lower-area {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+/* ポップアップページ */
+.popup-page {
+  background-color: #dcefff;
+  height: 100%;
+}
+.popup-page .popup-page-title {
+  background-color: #5fb3f5;
+  padding: 4px;
+  text-align: center;
+  color: #fff;
+}
+.popup-page-window {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100%;
+}
+
+
+
+
+/* サイドバーエリア定義 */
 aside {
-  /* サイドバーエリア定義 */
   background-color: royalblue;
   grid-column: 14 / span 3;
   grid-row: 2 / span 7;
 
 }
+
+aside p {
+  text-align: center;
+}
+
+
+/* フッターエリア定義 */
 footer {
-  /* フッターエリア定義 */
   background-color: royalblue;
   grid-column: 1 / span 16;
   grid-row: 9 / span 1;
 }
 
-
-
+footer p {
+  margin-left: 1em;
+}
 
 
 
