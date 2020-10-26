@@ -22,7 +22,7 @@ body {
 }
 
 .start-page {
-  /*display: none;*/
+  display: none;
 }
 
 .start-btn-state0 {
@@ -42,6 +42,139 @@ body {
   display: none;
 }
 
+.startup-page {
+  display: none;
+}
+
+.startup-page p {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white;
+}
+
+.spinner.type1 {
+  border-radius: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+  /* ローディング要素のアニメーションを指定 */
+  -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+  animation: spinner1_1 1.5s infinite linear forwards;
+}
+
+.spinner.type1 span {
+  /* Loading テキストのアニメーションを指定 */
+  animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+}
+
+@-webkit-keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.shutdown-page {
+  display: none;
+}
+
+.shutdown-page p {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+}
+
+
+
 
 .body-container {
   height: inherit;
@@ -58,7 +191,7 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  display: none;
+  /*display: none;*/
 }
 
 .popup-switcher-out1 {

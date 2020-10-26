@@ -1,9 +1,8 @@
 @charset "utf-8";
 
 /* html文書共通設定 */
-*{
+* {
   padding: 0;
-  margin: 0;
   color: white;
 }
 
@@ -20,11 +19,32 @@ html {
   height: 100%;
 }
 
-
 body {
-  height: 100%;
-  font-family: sans-serif;
   background-image: url("/img/430995121-539072_3840x2160-48XV-1920x1080-MM-100.jpg");
+  font-family: sans-serif;
+  height: 100%;
+  margin: auto;
+}
+
+.start-page {
+  display: none;
+}
+
+.start-btn-state0 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+}
+
+.startup-page {
+  display: none;
+}
+
+.main-page {
+  height: inherit;
+  /*display: none;*/
 }
 
 .body-container {
@@ -52,6 +72,7 @@ header p {
   grid-column: 1 / span 8;
   grid-row: 1 / span 1;
   margin: auto 0;
+  padding-left: 1em;
 }
 
 header button {
@@ -71,8 +92,6 @@ nav {
   grid-template-rows: repeat(7, 1fr);
 }
 
-
-/* メインエリア定義 */
 main {
   background-color: royalblue;
   grid-column: 4 / span 10;
@@ -82,33 +101,1032 @@ main {
   grid-template-rows: repeat(2, 1fr);
 }
 
-.upper-area {
+.element-frame1 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
+  margin: 1%;
 }
 
-.lower-area {
+.element-frame2 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  margin: 1%;
+}
+
+.box {
+  height: 100%;
+  background-color: skyblue;
+}
+
+.box .box-title {
+  background-color: gray;
+  text-align: center;
+  padding: 0.2em;
+}
+
+.element-button1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  margin: 7% 4% 4% 4%;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.element-button2 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  margin: 7% 4% 4% 4%;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+/* ＶＰ映像切替ポップアップページ */
+.popup-switcher-out1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  /*display: none;*/
+}
+
+.vp-btn1-state0 {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.vp-btn1-state1 {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.vp-btn2-state0 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.vp-btn2-state1 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.vp-btn3-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.vp-btn3-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.vp-btn4-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.vp-btn4-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.vp-btn5-state0 {
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.vp-btn5-state1 {
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.vp-btn6-state0 {
+  grid-column: 5 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.vp-btn6-state1 {
+  grid-column: 5 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.vp-btn7-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.vp-btn7-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.vp-btn8-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.vp-btn8-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+/* モニター映像切替ポップアップページ */
+.popup-switcher-out2 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  /*display: none;*/
+}
+
+.moni-btn1-state0 {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.moni-btn1-state1 {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.moni-btn2-state0 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.moni-btn2-state1 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.moni-btn3-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.moni-btn3-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.moni-btn4-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.moni-btn4-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
+  display: none;
+}
+
+.moni-btn5-state0 {
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.moni-btn5-state1 {
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.moni-btn6-state0 {
+  grid-column: 5 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.moni-btn6-state1 {
+  grid-column: 5 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.moni-btn7-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.moni-btn7-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+.moni-btn8-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
+}
+
+.moni-btn8-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
+  display: none;
+}
+
+/* ＶＰ操作ポップアップページ */
+.popup-vp-control {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
 }
 
-/* ポップアップページ */
-.popup-page {
-  background-color: #dcefff;
-  height: 100%;
+.vp-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
 }
-.popup-page .popup-page-title {
-  background-color: #5fb3f5;
-  padding: 4px;
-  text-align: center;
-  color: #fff;
+
+.vp-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
 }
-.popup-page-window {
+
+.vp-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.vp-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.vp-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.vp-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+/* スクリーン操作ポップアップページ */
+.popup-screen-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  height: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
 }
+
+.sc-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.sc-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.sc-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.sc-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.sc-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.sc-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+/* 照明操作ポップアップページ */
+.popup-light-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
+}
+
+.light-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.light-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.light-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.light-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.light-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.light-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+/* 録画映像選択ポップアップページ */
+.popup-rec-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
+}
+
+.rec-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.rec-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.rec-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.rec-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.rec-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.rec-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+/* 下側ポップアップページ リモコン角ボタン用 */
+.element-button2-squer {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  margin: 7% 4% 4% 4%;
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+/* ブルーレイリモコンポップアップページ */
+.popup-bluray-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
+}
+
+.bluray-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.bluray-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.bluray-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.bluray-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.bluray-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.bluray-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.bluray-control-btn4-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn4-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn5-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn5-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn6-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn6-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn7-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.bluray-control-btn7-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+.bluray-control-btn8-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.bluray-control-btn8-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.bluray-control-btn9-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.bluray-control-btn9-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.bluray-control-btn10-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn10-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn11-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn11-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn12-state0 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.bluray-control-btn12-state1 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.bluray-control-btn13-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.bluray-control-btn13-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+/* カメラリモコンポップアップページ */
+.popup-camera-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
+}
+
+.camera-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn4-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.camera-control-btn4-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.camera-control-btn5-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.camera-control-btn5-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.camera-control-btn6-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.camera-control-btn6-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+.camera-control-btn7-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn7-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn8-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn8-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn9-state0 {
+  grid-column: 28 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.camera-control-btn9-state1 {
+  grid-column: 28 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.camera-control-btn10-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.camera-control-btn10-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.camera-control-btn11-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.camera-control-btn11-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.camera-control-btn12-state0 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.camera-control-btn12-state1 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.camera-control-btn13-state0 {
+  grid-column: 20 / span 11;
+  grid-row: 7 / span 3;
+}
+
+.camera-control-btn13-state1 {
+  grid-column: 20 / span 11;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+/* 書画カメラリモコンポップアップページ */
+.popup-ohc-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  display: none;
+}
+
+.ohc-control-txt1 {
+  grid-column: 5 / span 3;
+  grid-row: 1 / span 3;
+  text-align: center;
+  margin: auto;
+}
+
+.ohc-control-btn1-state0 {
+  grid-column: 8 / span 4;
+  grid-row: 1 / span 3;
+}
+
+.ohc-control-btn1-state1 {
+  grid-column: 8 / span 4;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ohc-control-txt2 {
+  grid-column: 14 / span 3;
+  grid-row: 1 / span 3;
+  text-align: center;
+  margin: auto;
+}
+
+.ohc-control-btn2-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ohc-control-btn2-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ohc-control-btn3-state0 {
+  grid-column: 25 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ohc-control-btn3-state1 {
+  grid-column: 25 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ohc-control-txt3 {
+  grid-column: 14 / span 3;
+  grid-row: 4 / span 3;
+  text-align: center;
+  margin: auto;
+}
+
+.ohc-control-btn4-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ohc-control-btn4-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ohc-control-btn5-state0 {
+  grid-column: 25 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ohc-control-btn5-state1 {
+  grid-column: 25 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ohc-control-txt4 {
+  grid-column: 14 / span 3;
+  grid-row: 7 / span 3;
+  text-align: center;
+  margin: auto;
+}
+
+.ohc-control-btn6-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.ohc-control-btn6-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+.ohc-control-btn7-state0 {
+  grid-column: 21 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.ohc-control-btn7-state1 {
+  grid-column: 21 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+.ohc-control-btn8-state0 {
+  grid-column: 25 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.ohc-control-btn8-state1 {
+  grid-column: 25 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+
+/* ブルーレイリモコンポップアップページ */
+.popup-ssr-control {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  /*display: none;*/
+}
+
+.ssr-control-btn1-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ssr-control-btn1-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ssr-control-btn2-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ssr-control-btn2-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ssr-control-btn3-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ssr-control-btn3-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ssr-control-btn4-state0 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn4-state1 {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn5-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn5-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn6-state0 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn6-state1 {
+  grid-column: 11 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn7-state0 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.ssr-control-btn7-state1 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+.ssr-control-btn8-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ssr-control-btn8-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ssr-control-btn9-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.ssr-control-btn9-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 1 / span 3;
+  display: none;
+}
+
+.ssr-control-btn10-state0 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn10-state1 {
+  grid-column: 20 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn11-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn11-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn12-state0 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+}
+
+.ssr-control-btn12-state1 {
+  grid-column: 28 / span 3;
+  grid-row: 4 / span 3;
+  display: none;
+}
+
+.ssr-control-btn13-state0 {
+  grid-column: 24 / span 3;
+  grid-row: 7 / span 3;
+}
+
+.ssr-control-btn13-state1 {
+  grid-column: 24 / span 3;
+  grid-row: 7 / span 3;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -136,26 +1154,3 @@ footer {
 footer p {
   margin-left: 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
