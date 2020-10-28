@@ -13,29 +13,33 @@
 <body>
 
   <!-- システムスタートページ -->
-
-
+  <div id="start-page">
+    <!-- システム起動ボタン -->
+    <button id="start-btn-state0">システム起動</button>
+    <button id="start-btn-state1">システム起動</button>
+  </div>
 
   <!-- 起動アニメーションページ -->
+  <div id="startup-animation-page">
 
-
+  </div>
 
   <!-- メインページ -->
-  <div class="main-page">
+  <div id="main-page">
     <div class="body-container">
       <!-- タイトルヘッダーの表示 -->
       <header>
         <p>タイトルor部屋名</p>
-        <button>システム<br>終了</button>
+        <button type="button">システム<br>終了</button>
       </header>
 
       <nav>
-        <button>メイン映像<br>選択</button>
-        <button>モニタ映像<br>選択</button>
-        <button>プロジェクター<br>操作</button>
-        <button>スクリーン<br>操作</button>
-        <button>照明操作</button>
-        <button>録画選択</button>
+        <button type="button" id="nav-main-video-btn">メイン映像<br>選択</button>
+        <button type="button" id="nav-moni-video-btn">モニタ映像<br>選択</button>
+        <button type="button" id="nav-vp-control-btn">プロジェクター<br>操作</button>
+        <button type="button" id="nav-sc-control-btn">スクリーン<br>操作</button>
+        <button type="button" id="nav-light-control-btn">照明操作</button>
+        <button type="button" id="nav-rec-control-btn">録画選択</button>
       </nav>
 
       <main>
@@ -48,22 +52,22 @@
             </div>
           </div>
           <div class="element-button1">
-            <button class="vp-btn1-state0">ボタン<br>0</button>
-            <button class="vp-btn1-state1">ボタン<br>1</button>
-            <button class="vp-btn2-state0">ボタン<br>0</button>
-            <button class="vp-btn2-state1">ボタン<br>1</button>
-            <button class="vp-btn3-state0">ボタン<br>0</button>
-            <button class="vp-btn3-state1">ボタン<br>1</button>
-            <button class="vp-btn4-state0">ボタン<br>0</button>
-            <button class="vp-btn4-state1">ボタン<br>1</button>
-            <button class="vp-btn5-state0">ボタン<br>0</button>
-            <button class="vp-btn5-state1">ボタン<br>1</button>
-            <button class="vp-btn6-state0">ボタン<br>0</button>
-            <button class="vp-btn6-state1">ボタン<br>1</button>
-            <button class="vp-btn7-state0">ボタン<br>0</button>
-            <button class="vp-btn7-state1">ボタン<br>1</button>
-            <button class="vp-btn8-state0">ボタン<br>0</button>
-            <button class="vp-btn8-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn1-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn1-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn2-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn2-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn3-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn3-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn4-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn4-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn5-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn5-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn6-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn6-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn7-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn7-state1">ボタン<br>1</button>
+            <button type="button" id="vp-btn8-state0">ボタン<br>0</button>
+            <button type="button" id="vp-btn8-state1">ボタン<br>1</button>
           </div>
         </div>
         <!-- モニター映像選択ポップアップページ -->
@@ -74,22 +78,22 @@
             </div>
           </div>
           <div class="element-button1">
-            <button class="moni-btn1-state0">ボタン<br>0</button>
-            <button class="moni-btn1-state1">ボタン<br>1</button>
-            <button class="moni-btn2-state0">ボタン<br>0</button>
-            <button class="moni-btn2-state1">ボタン<br>1</button>
-            <button class="moni-btn3-state0">ボタン<br>0</button>
-            <button class="moni-btn3-state1">ボタン<br>1</button>
-            <button class="moni-btn4-state0">ボタン<br>0</button>
-            <button class="moni-btn4-state1">ボタン<br>1</button>
-            <button class="moni-btn5-state0">ボタン<br>0</button>
-            <button class="moni-btn5-state1">ボタン<br>1</button>
-            <button class="moni-btn6-state0">ボタン<br>0</button>
-            <button class="moni-btn6-state1">ボタン<br>1</button>
-            <button class="moni-btn7-state0">ボタン<br>0</button>
-            <button class="moni-btn7-state1">ボタン<br>1</button>
-            <button class="moni-btn8-state0">ボタン<br>0</button>
-            <button class="moni-btn8-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn1-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn1-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn2-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn2-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn3-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn3-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn4-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn4-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn5-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn5-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn6-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn6-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn7-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn7-state1">ボタン<br>1</button>
+            <button type="button" id="moni-btn8-state0">ボタン<br>0</button>
+            <button type="button" id="moni-btn8-state1">ボタン<br>1</button>
           </div>
         </div>
 
@@ -102,12 +106,12 @@
             </div>
           </div>
           <div class="element-button2">
-            <button class="vp-control-btn1-state0">ＯＮ<br>0</button>
-            <button class="vp-control-btn1-state1">ＯＮ<br>1</button>
-            <button class="vp-control-btn2-state0">ＯＦＦ<br>0</button>
-            <button class="vp-control-btn2-state1">ＯＦＦ<br>1</button>
-            <button class="vp-control-btn3-state0">ＭＵＴＥ<br>0</button>
-            <button class="vp-control-btn3-state1">ＭＵＴＥ<br>1</button>
+            <button type="button" id="vp-control-btn1-state0">ＯＮ<br>0</button>
+            <button type="button" id="vp-control-btn1-state1">ＯＮ<br>1</button>
+            <button type="button" id="vp-control-btn2-state0">ＯＦＦ<br>0</button>
+            <button type="button" id="vp-control-btn2-state1">ＯＦＦ<br>1</button>
+            <button type="button" id="vp-control-btn3-state0">ＭＵＴＥ<br>0</button>
+            <button type="button" id="vp-control-btn3-state1">ＭＵＴＥ<br>1</button>
           </div>
         </div>
 
@@ -119,12 +123,12 @@
             </div>
           </div>
           <div class="element-button2">
-            <button class="sc-control-btn1-state0">昇<br>0</button>
-            <button class="sc-control-btn1-state1">昇<br>1</button>
-            <button class="sc-control-btn2-state0">停<br>0</button>
-            <button class="sc-control-btn2-state1">停<br>1</button>
-            <button class="sc-control-btn3-state0">降<br>0</button>
-            <button class="sc-control-btn3-state1">降<br>1</button>
+            <button type="button" id="sc-control-btn1-state0">昇<br>0</button>
+            <button type="button" id="sc-control-btn1-state1">昇<br>1</button>
+            <button type="button" id="sc-control-btn2-state0">停<br>0</button>
+            <button type="button" id="sc-control-btn2-state1">停<br>1</button>
+            <button type="button" id="sc-control-btn3-state0">降<br>0</button>
+            <button type="button" id="sc-control-btn3-state1">降<br>1</button>
           </div>
         </div>
 
@@ -136,12 +140,12 @@
             </div>
           </div>
           <div class="element-button2">
-            <button class="light-control-btn1-state0">全点灯<br>0</button>
-            <button class="light-control-btn1-state1">全点灯<br>1</button>
-            <button class="light-control-btn2-state0">前消灯<br>0</button>
-            <button class="light-control-btn2-state1">前消灯<br>1</button>
-            <button class="light-control-btn3-state0">全消灯<br>0</button>
-            <button class="light-control-btn3-state1">全消灯<br>1</button>
+            <button type="button" id="light-control-btn1-state0">全点灯<br>0</button>
+            <button type="button" id="light-control-btn1-state1">全点灯<br>1</button>
+            <button type="button" id="light-control-btn2-state0">前消灯<br>0</button>
+            <button type="button" id="light-control-btn2-state1">前消灯<br>1</button>
+            <button type="button" id="light-control-btn3-state0">全消灯<br>0</button>
+            <button type="button" id="light-control-btn3-state1">全消灯<br>1</button>
           </div>
         </div>
 
@@ -153,12 +157,12 @@
             </div>
           </div>
           <div class="element-button2">
-            <button class="rec-control-btn1-state0">ソース１<br>0</button>
-            <button class="rec-control-btn1-state1">ソース１<br>1</button>
-            <button class="rec-control-btn2-state0">ソース２<br>0</button>
-            <button class="rec-control-btn2-state1">ソース２<br>1</button>
-            <button class="rec-control-btn3-state0">無選択<br>0</button>
-            <button class="rec-control-btn3-state1">無選択<br>1</button>
+            <button type="button" id="rec-control-btn1-state0">ソース１<br>0</button>
+            <button type="button" id="rec-control-btn1-state1">ソース１<br>1</button>
+            <button type="button" id="rec-control-btn2-state0">ソース２<br>0</button>
+            <button type="button" id="rec-control-btn2-state1">ソース２<br>1</button>
+            <button type="button" id="rec-control-btn3-state0">無選択<br>0</button>
+            <button type="button" id="rec-control-btn3-state1">無選択<br>1</button>
           </div>
         </div>
 
@@ -170,32 +174,32 @@
             </div>
           </div>
           <div class="element-button2-squer">
-            <button class="bluray-control-btn1-state0">１<br>0</button>
-            <button class="bluray-control-btn1-state1">１<br>1</button>
-            <button class="bluray-control-btn2-state0">２<br>0</button>
-            <button class="bluray-control-btn2-state1">２<br>1</button>
-            <button class="bluray-control-btn3-state0">３<br>0</button>
-            <button class="bluray-control-btn3-state1">３<br>1</button>
-            <button class="bluray-control-btn4-state0">４<br>0</button>
-            <button class="bluray-control-btn4-state1">４<br>1</button>
-            <button class="bluray-control-btn5-state0">５<br>0</button>
-            <button class="bluray-control-btn5-state1">５<br>1</button>
-            <button class="bluray-control-btn6-state0">６<br>0</button>
-            <button class="bluray-control-btn6-state1">６<br>1</button>
-            <button class="bluray-control-btn7-state0">７<br>0</button>
-            <button class="bluray-control-btn7-state1">７<br>1</button>
-            <button class="bluray-control-btn8-state0">８<br>0</button>
-            <button class="bluray-control-btn8-state1">８<br>1</button>
-            <button class="bluray-control-btn9-state0">９<br>0</button>
-            <button class="bluray-control-btn9-state1">９<br>1</button>
-            <button class="bluray-control-btn10-state0">１０<br>0</button>
-            <button class="bluray-control-btn10-state1">１０<br>1</button>
-            <button class="bluray-control-btn11-state0">１１<br>0</button>
-            <button class="bluray-control-btn11-state1">１１<br>1</button>
-            <button class="bluray-control-btn12-state0">１２<br>0</button>
-            <button class="bluray-control-btn12-state1">１２<br>1</button>
-            <button class="bluray-control-btn13-state0">１３<br>0</button>
-            <button class="bluray-control-btn13-state1">１３<br>1</button>
+            <button type="button" id="bluray-control-btn1-state0">１<br>0</button>
+            <button type="button" id="bluray-control-btn1-state1">１<br>1</button>
+            <button type="button" id="bluray-control-btn2-state0">２<br>0</button>
+            <button type="button" id="bluray-control-btn2-state1">２<br>1</button>
+            <button type="button" id="bluray-control-btn3-state0">３<br>0</button>
+            <button type="button" id="bluray-control-btn3-state1">３<br>1</button>
+            <button type="button" id="bluray-control-btn4-state0">４<br>0</button>
+            <button type="button" id="bluray-control-btn4-state1">４<br>1</button>
+            <button type="button" id="bluray-control-btn5-state0">５<br>0</button>
+            <button type="button" id="bluray-control-btn5-state1">５<br>1</button>
+            <button type="button" id="bluray-control-btn6-state0">６<br>0</button>
+            <button type="button" id="bluray-control-btn6-state1">６<br>1</button>
+            <button type="button" id="bluray-control-btn7-state0">７<br>0</button>
+            <button type="button" id="bluray-control-btn7-state1">７<br>1</button>
+            <button type="button" id="bluray-control-btn8-state0">８<br>0</button>
+            <button type="button" id="bluray-control-btn8-state1">８<br>1</button>
+            <button type="button" id="bluray-control-btn9-state0">９<br>0</button>
+            <button type="button" id="bluray-control-btn9-state1">９<br>1</button>
+            <button type="button" id="bluray-control-btn10-state0">１０<br>0</button>
+            <button type="button" id="bluray-control-btn10-state1">１０<br>1</button>
+            <button type="button" id="bluray-control-btn11-state0">１１<br>0</button>
+            <button type="button" id="bluray-control-btn11-state1">１１<br>1</button>
+            <button type="button" id="bluray-control-btn12-state0">１２<br>0</button>
+            <button type="button" id="bluray-control-btn12-state1">１２<br>1</button>
+            <button type="button" id="bluray-control-btn13-state0">１３<br>0</button>
+            <button type="button" id="bluray-control-btn13-state1">１３<br>1</button>
           </div>
         </div>
 
@@ -207,32 +211,32 @@
             </div>
           </div>
           <div class="element-button2-squer">
-            <button class="camera-control-btn1-state0">１<br>0</button>
-            <button class="camera-control-btn1-state1">１<br>1</button>
-            <button class="camera-control-btn2-state0">２<br>0</button>
-            <button class="camera-control-btn2-state1">２<br>1</button>
-            <button class="camera-control-btn3-state0">３<br>0</button>
-            <button class="camera-control-btn3-state1">３<br>1</button>
-            <button class="camera-control-btn4-state0">４<br>0</button>
-            <button class="camera-control-btn4-state1">４<br>1</button>
-            <button class="camera-control-btn5-state0">５<br>0</button>
-            <button class="camera-control-btn5-state1">５<br>1</button>
-            <button class="camera-control-btn6-state0">６<br>0</button>
-            <button class="camera-control-btn6-state1">６<br>1</button>
-            <button class="camera-control-btn7-state0">７<br>0</button>
-            <button class="camera-control-btn7-state1">７<br>1</button>
-            <button class="camera-control-btn8-state0">８<br>0</button>
-            <button class="camera-control-btn8-state1">８<br>1</button>
-            <button class="camera-control-btn9-state0">９<br>0</button>
-            <button class="camera-control-btn9-state1">９<br>1</button>
-            <button class="camera-control-btn10-state0">１０<br>0</button>
-            <button class="camera-control-btn10-state1">１０<br>1</button>
-            <button class="camera-control-btn11-state0">１１<br>0</button>
-            <button class="camera-control-btn11-state1">１１<br>1</button>
-            <button class="camera-control-btn12-state0">１２<br>0</button>
-            <button class="camera-control-btn12-state1">１２<br>1</button>
-            <button class="camera-control-btn13-state0">１３<br>0</button>
-            <button class="camera-control-btn13-state1">１３<br>1</button>
+            <button type="button" id="camera-control-btn1-state0">１<br>0</button>
+            <button type="button" id="camera-control-btn1-state1">１<br>1</button>
+            <button type="button" id="camera-control-btn2-state0">２<br>0</button>
+            <button type="button" id="camera-control-btn2-state1">２<br>1</button>
+            <button type="button" id="camera-control-btn3-state0">３<br>0</button>
+            <button type="button" id="camera-control-btn3-state1">３<br>1</button>
+            <button type="button" id="camera-control-btn4-state0">４<br>0</button>
+            <button type="button" id="camera-control-btn4-state1">４<br>1</button>
+            <button type="button" id="camera-control-btn5-state0">５<br>0</button>
+            <button type="button" id="camera-control-btn5-state1">５<br>1</button>
+            <button type="button" id="camera-control-btn6-state0">６<br>0</button>
+            <button type="button" id="camera-control-btn6-state1">６<br>1</button>
+            <button type="button" id="camera-control-btn7-state0">７<br>0</button>
+            <button type="button" id="camera-control-btn7-state1">７<br>1</button>
+            <button type="button" id="camera-control-btn8-state0">８<br>0</button>
+            <button type="button" id="camera-control-btn8-state1">８<br>1</button>
+            <button type="button" id="camera-control-btn9-state0">９<br>0</button>
+            <button type="button" id="camera-control-btn9-state1">９<br>1</button>
+            <button type="button" id="camera-control-btn10-state0">１０<br>0</button>
+            <button type="button" id="camera-control-btn10-state1">１０<br>1</button>
+            <button type="button" id="camera-control-btn11-state0">１１<br>0</button>
+            <button type="button" id="camera-control-btn11-state1">１１<br>1</button>
+            <button type="button" id="camera-control-btn12-state0">１２<br>0</button>
+            <button type="button" id="camera-control-btn12-state1">１２<br>1</button>
+            <button type="button" id="camera-control-btn13-state0">１３<br>0</button>
+            <button type="button" id="camera-control-btn13-state1">１３<br>1</button>
           </div>
         </div>
 
@@ -245,25 +249,25 @@
           </div>
           <div class="element-button2-squer">
             <p class="ohc-control-txt1">オート<br>フォーカス</p>
-            <button class="ohc-control-btn1-state0">ＡＦ<br>0</button>
-            <button class="ohc-control-btn1-state1">ＡＦ<br>1</button>
+            <button type="button" id="ohc-control-btn1-state0">ＡＦ<br>0</button>
+            <button type="button" id="ohc-control-btn1-state1">ＡＦ<br>1</button>
             <p class="ohc-control-txt2">照明<br>ON/OFF</p>
-            <button class="ohc-control-btn2-state0">ＯＮ<br>0</button>
-            <button class="ohc-control-btn2-state1">ＯＮ<br>1</button>
-            <button class="ohc-control-btn3-state0">ＯＦＦ<br>0</button>
-            <button class="ohc-control-btn3-state1">ＯＦＦ<br>1</button>
+            <button type="button" id="ohc-control-btn2-state0">ＯＮ<br>0</button>
+            <button type="button" id="ohc-control-btn2-state1">ＯＮ<br>1</button>
+            <button type="button" id="ohc-control-btn3-state0">ＯＦＦ<br>0</button>
+            <button type="button" id="ohc-control-btn3-state1">ＯＦＦ<br>1</button>
             <p class="ohc-control-txt3">ズーム</p>
-            <button class="ohc-control-btn4-state0">ＴＥＬＥ<br>0</button>
-            <button class="ohc-control-btn4-state1">ＴＥＬＥ<br>1</button>
-            <button class="ohc-control-btn5-state0">ＷＩＤＥ<br>0</button>
-            <button class="ohc-control-btn5-state1">ＷＩＤＥ<br>1</button>
+            <button type="button" id="ohc-control-btn4-state0">ＴＥＬＥ<br>0</button>
+            <button type="button" id="ohc-control-btn4-state1">ＴＥＬＥ<br>1</button>
+            <button type="button" id="ohc-control-btn5-state0">ＷＩＤＥ<br>0</button>
+            <button type="button" id="ohc-control-btn5-state1">ＷＩＤＥ<br>1</button>
             <p class="ohc-control-txt4">アイリス</p>
-            <button class="ohc-control-btn6-state0">ＵＰ<br>0</button>
-            <button class="ohc-control-btn6-state1">ＵＰ<br>1</button>
-            <button class="ohc-control-btn7-state0">ノーマル<br>0</button>
-            <button class="ohc-control-btn7-state1">ノーマル<br>1</button>
-            <button class="ohc-control-btn8-state0">ＤＯＷＮ<br>0</button>
-            <button class="ohc-control-btn8-state1">ＤＯＷＮ<br>1</button>
+            <button type="button" id="ohc-control-btn6-state0">ＵＰ<br>0</button>
+            <button type="button" id="ohc-control-btn6-state1">ＵＰ<br>1</button>
+            <button type="button" id="ohc-control-btn7-state0">ノーマル<br>0</button>
+            <button type="button" id="ohc-control-btn7-state1">ノーマル<br>1</button>
+            <button type="button" id="ohc-control-btn8-state0">ＤＯＷＮ<br>0</button>
+            <button type="button" id="ohc-control-btn8-state1">ＤＯＷＮ<br>1</button>
           </div>
         </div>
 
@@ -275,54 +279,105 @@
             </div>
           </div>
           <div class="element-button2-squer">
-            <button class="ssr-control-btn1-state0">１<br>0</button>
-            <button class="ssr-control-btn1-state1">１<br>1</button>
-            <button class="ssr-control-btn2-state0">２<br>0</button>
-            <button class="ssr-control-btn2-state1">２<br>1</button>
-            <button class="ssr-control-btn3-state0">３<br>0</button>
-            <button class="ssr-control-btn3-state1">３<br>1</button>
-            <button class="ssr-control-btn4-state0">４<br>0</button>
-            <button class="ssr-control-btn4-state1">４<br>1</button>
-            <button class="ssr-control-btn5-state0">５<br>0</button>
-            <button class="ssr-control-btn5-state1">５<br>1</button>
-            <button class="ssr-control-btn6-state0">６<br>0</button>
-            <button class="ssr-control-btn6-state1">６<br>1</button>
-            <button class="ssr-control-btn7-state0">７<br>0</button>
-            <button class="ssr-control-btn7-state1">７<br>1</button>
-            <button class="ssr-control-btn8-state0">８<br>0</button>
-            <button class="ssr-control-btn8-state1">８<br>1</button>
-            <button class="ssr-control-btn9-state0">９<br>0</button>
-            <button class="ssr-control-btn9-state1">９<br>1</button>
-            <button class="ssr-control-btn10-state0">１０<br>0</button>
-            <button class="ssr-control-btn10-state1">１０<br>1</button>
-            <button class="ssr-control-btn11-state0">１１<br>0</button>
-            <button class="ssr-control-btn11-state1">１１<br>1</button>
-            <button class="ssr-control-btn12-state0">１２<br>0</button>
-            <button class="ssr-control-btn12-state1">１２<br>1</button>
-            <button class="ssr-control-btn13-state0">１３<br>0</button>
-            <button class="ssr-control-btn13-state1">１３<br>1</button>
+            <button type="button" id="ssr-control-btn1-state0">SD1<br>0</button>
+            <button type="button" id="ssr-control-btn1-state1">SD1<br>1</button>
+            <button type="button" id="ssr-control-btn2-state0">SD2<br>0</button>
+            <button type="button" id="ssr-control-btn2-state1">SD2<br>1</button>
+            <button type="button" id="ssr-control-btn3-state0">USB<br>0</button>
+            <button type="button" id="ssr-control-btn3-state1">USB<br>1</button>
+            <button type="button" id="ssr-control-btn4-state0">STOP<br>0</button>
+            <button type="button" id="ssr-control-btn4-state1">STOP<br>1</button>
+            <button type="button" id="ssr-control-btn5-state0">PLAY<br>0</button>
+            <button type="button" id="ssr-control-btn5-state1">PLAY<br>1</button>
+            <button type="button" id="ssr-control-btn6-state0">PAUSE<br>0</button>
+            <button type="button" id="ssr-control-btn6-state1">PAUSE<br>1</button>
+            <button type="button" id="ssr-control-btn7-state0">REC<br>0</button>
+            <button type="button" id="ssr-control-btn7-state1">REC<br>1</button>
+            <button type="button" id="ssr-control-btn8-state0">REW<br>0</button>
+            <button type="button" id="ssr-control-btn8-state1">REW<br>1</button>
+            <button type="button" id="ssr-control-btn9-state0">FF<br>0</button>
+            <button type="button" id="ssr-control-btn9-state1">FF<br>1</button>
+            <button type="button" id="ssr-control-btn10-state0">R.SKIP<br>0</button>
+            <button type="button" id="ssr-control-btn10-state1">R.SKIP<br>1</button>
+            <button type="button" id="ssr-control-btn11-state0">F.SKIP<br>0</button>
+            <button type="button" id="ssr-control-btn11-state1">F.SKIP<br>1</button>
           </div>
         </div>
-
-
-
       </main>
 
+      <!-- サイドバー -->
       <aside>
-        <p>サイドバー</p>
+        <!-- 映像音量テキスト -->
+        <div id="audio-txt1">映像</div>
+        <!-- マイク音量テキスト -->
+        <div id="audio-txt2">マイク</div>
+
+        <!-- 音量スライダーバー -->
+        <div id="slider-wrapper-av">
+          <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+          <input type="range" id="item-main-vol" min="0" max="100" value="70" orient="vertical">
+        </div>
+        <div id="slider-wrapper-mic">
+          <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+          <input type="range" id="item-mic-vol" min="0" max="100" value="70" orient="vertical">
+        </div>
+
+        <!-- 映像音量ミュートボタン -->
+        <button type="button" id="audio-mute-btn1-state0">ミュート<br>0</button>
+        <button type="button" id="audio-mute-btn1-state1">ミュート<br>1</button>
+        <!-- マイク音量ミュートボタン -->
+        <button type="button" id="audio-mute-btn2-state0">ミュート<br>0</button>
+        <button type="button" id="audio-mute-btn2-state1">ミュート<br>1</button>
+
+        <!-- 音量詳細ボタン -->
+        <button type="button" id="audio-details-btn-state0">音量設定<br>0</button>
+        <button type="button" id="audio-details-btn-state1">音量設定<br>1</button>
+
       </aside>
 
       <footer>
         <p>ここにシステムメッセージ表示</p>
       </footer>
+
+
+      <!-- システム終了確認モーダルダイアログページ コンテナー -->
+      <div class="modal-dialog-container">
+        <div class="shutdown-dialog-box">
+          <div class="box">
+            <div class="box-title">システム終了</div>
+          </div>
+        </div>
+        <div class="shutdown-dialog-item">
+          <div id="shutdown-message">
+            <p>システムを終了しますか？</p>
+          </div>
+          <!-- システム終了ボタン 「はい」 -->
+          <button type="button" id="shutdown-yes-btn-state0">はい<br>0</button>
+          <button type="button" id="shutdown-yes-btn-state1">はい<br>1</button>
+          <!-- システム終了ボタン 「はい」 -->
+          <button type="button" id="shutdown-no-btn-state0">いいえ<br>0</button>
+          <button type="button" id="shutdown-no-btn-state1">いいえ<br>1</button>
+        </div>
+      </div>
+
+
+
+      <!-- 音量詳細モーダルダイアログページ コンテナー -->
+      <div class="volume-detail-container">
+        <p>ボリューム音量詳細ポップアップページ</p>
+      </div>
+
+
+
     </div>
   </div>
 
+
+
   <!-- 終了アニメーションページ -->
+  <div id="shutdown-animation-page">
 
-
-
-
+  </div>
 
 
 

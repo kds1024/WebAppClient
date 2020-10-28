@@ -43,7 +43,7 @@ body {
 }
 
 .startup-page {
-  display: none;
+  /*display: none;*/
 }
 
 .startup-page p {
@@ -191,7 +191,7 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  /*display: none;*/
+  display: none;
 }
 
 .popup-switcher-out1 {

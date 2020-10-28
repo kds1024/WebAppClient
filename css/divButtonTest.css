@@ -10,10 +10,10 @@
 button {
   outline: none;
   border-style: none;
-  margin: 8px;
+  margin: 3%;
   background-color: gray;
+  opacity: 0.9;
 }
-
 
 html {
   height: 100%;
@@ -26,25 +26,44 @@ body {
   margin: auto;
 }
 
-.start-page {
-  display: none;
+#start-page {
+  /*display: none;*/
 }
 
-.start-btn-state0 {
+#start-btn-state0 {
   position: absolute;
+  margin: auto;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 2em;
 }
 
-.startup-page {
+#start-btn-state1 {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 2em;
   display: none;
 }
 
-.main-page {
+#startup-animation-page {
+  display: none;
+}
+
+#main-page {
   height: inherit;
-  /*display: none;*/
+  display: none;
 }
 
 .body-container {
@@ -53,12 +72,11 @@ body {
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(9, 1fr);
   grid-gap: 8px;
-  opacity: 0.7;
 }
 
 header {
   /* ヘッダーエリア定義 */
-  background-color: royalblue;
+  background-color: rgb(65, 105, 225, 0.6);
   grid-column: 1 / span 16;
   grid-row: 1 / span 1;
   display: grid;
@@ -68,7 +86,6 @@ header {
 
 /* タイトルエリア */
 header p {
-  background-color: gray;
   grid-column: 1 / span 8;
   grid-row: 1 / span 1;
   margin: auto 0;
@@ -84,7 +101,7 @@ header button {
 
 /* ナビゲーションエリア定義 */
 nav {
-  background-color: royalblue;
+  background-color: rgb(65, 105, 225, 0.6);
   grid-column: 1 / span 3;
   grid-row: 2 / span 7;
   display: grid;
@@ -93,7 +110,7 @@ nav {
 }
 
 main {
-  background-color: royalblue;
+  background-color: rgb(65, 105, 225, 0.6);
   grid-column: 4 / span 10;
   grid-row: 2 / span 7;
   display: grid;
@@ -115,19 +132,20 @@ main {
 
 .box {
   height: 100%;
-  background-color: skyblue;
+  background-color: rgb(220, 239, 255);
 }
 
 .box .box-title {
-  background-color: gray;
+  background-color: rgb(83, 155, 211);
   text-align: center;
+  color: rgb(255, 255, 255);
   padding: 0.2em;
 }
 
 .element-button1 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  margin: 7% 4% 4% 4%;
+  margin: 5% 4% 1% 4%;
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(9, 1fr);
@@ -136,7 +154,7 @@ main {
 .element-button2 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  margin: 7% 4% 4% 4%;
+  margin: 5% 4% 1% 4%;
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(9, 1fr);
@@ -152,89 +170,89 @@ main {
   /*display: none;*/
 }
 
-.vp-btn1-state0 {
+#vp-btn1-state0 {
   grid-column: 1 / span 3;
   grid-row: 2 / span 3;
 }
 
-.vp-btn1-state1 {
+#vp-btn1-state1 {
   grid-column: 1 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.vp-btn2-state0 {
+#vp-btn2-state0 {
   grid-column: 5 / span 3;
   grid-row: 2 / span 3;
 }
 
-.vp-btn2-state1 {
+#vp-btn2-state1 {
   grid-column: 5 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.vp-btn3-state0 {
+#vp-btn3-state0 {
   grid-column: 9 / span 3;
   grid-row: 2 / span 3;
 }
 
-.vp-btn3-state1 {
+#vp-btn3-state1 {
   grid-column: 9 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.vp-btn4-state0 {
+#vp-btn4-state0 {
   grid-column: 13 / span 3;
   grid-row: 2 / span 3;
 }
 
-.vp-btn4-state1 {
+#vp-btn4-state1 {
   grid-column: 13 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.vp-btn5-state0 {
+#vp-btn5-state0 {
   grid-column: 1 / span 3;
   grid-row: 6 / span 3;
 }
 
-.vp-btn5-state1 {
+#vp-btn5-state1 {
   grid-column: 1 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.vp-btn6-state0 {
+#vp-btn6-state0 {
   grid-column: 5 / span 3;
   grid-row: 6 / span 3;
 }
 
-.vp-btn6-state1 {
+#vp-btn6-state1 {
   grid-column: 5 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.vp-btn7-state0 {
+#vp-btn7-state0 {
   grid-column: 9 / span 3;
   grid-row: 6 / span 3;
 }
 
-.vp-btn7-state1 {
+#vp-btn7-state1 {
   grid-column: 9 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.vp-btn8-state0 {
+#vp-btn8-state0 {
   grid-column: 13 / span 3;
   grid-row: 6 / span 3;
 }
 
-.vp-btn8-state1 {
+#vp-btn8-state1 {
   grid-column: 13 / span 3;
   grid-row: 6 / span 3;
   display: none;
@@ -250,89 +268,89 @@ main {
   /*display: none;*/
 }
 
-.moni-btn1-state0 {
+#moni-btn1-state0 {
   grid-column: 1 / span 3;
   grid-row: 2 / span 3;
 }
 
-.moni-btn1-state1 {
+#moni-btn1-state1 {
   grid-column: 1 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.moni-btn2-state0 {
+#moni-btn2-state0 {
   grid-column: 5 / span 3;
   grid-row: 2 / span 3;
 }
 
-.moni-btn2-state1 {
+#moni-btn2-state1 {
   grid-column: 5 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.moni-btn3-state0 {
+#moni-btn3-state0 {
   grid-column: 9 / span 3;
   grid-row: 2 / span 3;
 }
 
-.moni-btn3-state1 {
+#moni-btn3-state1 {
   grid-column: 9 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.moni-btn4-state0 {
+#moni-btn4-state0 {
   grid-column: 13 / span 3;
   grid-row: 2 / span 3;
 }
 
-.moni-btn4-state1 {
+#moni-btn4-state1 {
   grid-column: 13 / span 3;
   grid-row: 2 / span 3;
   display: none;
 }
 
-.moni-btn5-state0 {
+#moni-btn5-state0 {
   grid-column: 1 / span 3;
   grid-row: 6 / span 3;
 }
 
-.moni-btn5-state1 {
+#moni-btn5-state1 {
   grid-column: 1 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.moni-btn6-state0 {
+#moni-btn6-state0 {
   grid-column: 5 / span 3;
   grid-row: 6 / span 3;
 }
 
-.moni-btn6-state1 {
+#moni-btn6-state1 {
   grid-column: 5 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.moni-btn7-state0 {
+#moni-btn7-state0 {
   grid-column: 9 / span 3;
   grid-row: 6 / span 3;
 }
 
-.moni-btn7-state1 {
+#moni-btn7-state1 {
   grid-column: 9 / span 3;
   grid-row: 6 / span 3;
   display: none;
 }
 
-.moni-btn8-state0 {
+#moni-btn8-state0 {
   grid-column: 13 / span 3;
   grid-row: 6 / span 3;
 }
 
-.moni-btn8-state1 {
+#moni-btn8-state1 {
   grid-column: 13 / span 3;
   grid-row: 6 / span 3;
   display: none;
@@ -348,34 +366,34 @@ main {
   display: none;
 }
 
-.vp-control-btn1-state0 {
+#vp-control-btn1-state0 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
 }
 
-.vp-control-btn1-state1 {
+#vp-control-btn1-state1 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.vp-control-btn2-state0 {
+#vp-control-btn2-state0 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
 }
 
-.vp-control-btn2-state1 {
+#vp-control-btn2-state1 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.vp-control-btn3-state0 {
+#vp-control-btn3-state0 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
 }
 
-.vp-control-btn3-state1 {
+#vp-control-btn3-state1 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
   display: none;
@@ -391,34 +409,34 @@ main {
   display: none;
 }
 
-.sc-control-btn1-state0 {
+#sc-control-btn1-state0 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
 }
 
-.sc-control-btn1-state1 {
+#sc-control-btn1-state1 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.sc-control-btn2-state0 {
+#sc-control-btn2-state0 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
 }
 
-.sc-control-btn2-state1 {
+#sc-control-btn2-state1 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.sc-control-btn3-state0 {
+#sc-control-btn3-state0 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
 }
 
-.sc-control-btn3-state1 {
+#sc-control-btn3-state1 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
   display: none;
@@ -434,34 +452,34 @@ main {
   display: none;
 }
 
-.light-control-btn1-state0 {
+#light-control-btn1-state0 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
 }
 
-.light-control-btn1-state1 {
+#light-control-btn1-state1 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.light-control-btn2-state0 {
+#light-control-btn2-state0 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
 }
 
-.light-control-btn2-state1 {
+#light-control-btn2-state1 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.light-control-btn3-state0 {
+#light-control-btn3-state0 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
 }
 
-.light-control-btn3-state1 {
+#light-control-btn3-state1 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
   display: none;
@@ -477,34 +495,35 @@ main {
   display: none;
 }
 
-.rec-control-btn1-state0 {
+#rec-control-btn1-state0 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
 }
 
-.rec-control-btn1-state1 {
+#rec-control-btn1-state1 {
   grid-column: 3 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.rec-control-btn2-state0 {
+#rec-control-btn2-state0 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
 }
 
-.rec-control-btn2-state1 {
+
+#rec-control-btn2-state1 {
   grid-column: 7 / span 3;
   grid-row: 4 / span 3;
   display: none;
 }
 
-.rec-control-btn3-state0 {
+#rec-control-btn3-state0 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
 }
 
-.rec-control-btn3-state1 {
+#rec-control-btn3-state1 {
   grid-column: 11 / span 3;
   grid-row: 4 / span 3;
   display: none;
@@ -514,10 +533,10 @@ main {
 .element-button2-squer {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  margin: 7% 4% 4% 4%;
+  margin: 5% 4% 1% 4%;
   display: grid;
   grid-template-columns: repeat(32, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 /* ブルーレイリモコンポップアップページ */
@@ -530,146 +549,146 @@ main {
   display: none;
 }
 
-.bluray-control-btn1-state0 {
+#bluray-control-btn1-state0 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.bluray-control-btn1-state1 {
+#bluray-control-btn1-state1 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.bluray-control-btn2-state0 {
+#bluray-control-btn2-state0 {
   grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.bluray-control-btn2-state1 {
+#bluray-control-btn2-state1 {
   grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.bluray-control-btn3-state0 {
+#bluray-control-btn3-state0 {
   grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.bluray-control-btn3-state1 {
+#bluray-control-btn3-state1 {
   grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.bluray-control-btn4-state0 {
+#bluray-control-btn4-state0 {
   grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn4-state1 {
+#bluray-control-btn4-state1 {
   grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn5-state0 {
+#bluray-control-btn5-state0 {
   grid-column: 7 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn5-state1 {
+#bluray-control-btn5-state1 {
   grid-column: 7 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn6-state0 {
+#bluray-control-btn6-state0 {
   grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn6-state1 {
+#bluray-control-btn6-state1 {
   grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn7-state0 {
+#bluray-control-btn7-state0 {
   grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.bluray-control-btn7-state1 {
+#bluray-control-btn7-state1 {
   grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.bluray-control-btn8-state0 {
+#bluray-control-btn8-state0 {
   grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.bluray-control-btn8-state1 {
+#bluray-control-btn8-state1 {
   grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.bluray-control-btn9-state0 {
+#bluray-control-btn9-state0 {
   grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.bluray-control-btn9-state1 {
+#bluray-control-btn9-state1 {
   grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.bluray-control-btn10-state0 {
+#bluray-control-btn10-state0 {
   grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn10-state1 {
+#bluray-control-btn10-state1 {
   grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn11-state0 {
+#bluray-control-btn11-state0 {
   grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn11-state1 {
+#bluray-control-btn11-state1 {
   grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn12-state0 {
+#bluray-control-btn12-state0 {
   grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.bluray-control-btn12-state1 {
+#bluray-control-btn12-state1 {
   grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.bluray-control-btn13-state0 {
+#bluray-control-btn13-state0 {
   grid-column: 24 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.bluray-control-btn13-state1 {
+#bluray-control-btn13-state1 {
   grid-column: 24 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
@@ -683,147 +702,147 @@ main {
   display: none;
 }
 
-.camera-control-btn1-state0 {
+#camera-control-btn1-state0 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn1-state1 {
+#camera-control-btn1-state1 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn2-state0 {
+#camera-control-btn2-state0 {
   grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn2-state1 {
+#camera-control-btn2-state1 {
   grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn3-state0 {
+#camera-control-btn3-state0 {
   grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn3-state1 {
+#camera-control-btn3-state1 {
   grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn4-state0 {
+#camera-control-btn4-state0 {
   grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.camera-control-btn4-state1 {
+#camera-control-btn4-state1 {
   grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.camera-control-btn5-state0 {
+#camera-control-btn5-state0 {
   grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.camera-control-btn5-state1 {
+#camera-control-btn5-state1 {
   grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.camera-control-btn6-state0 {
+#camera-control-btn6-state0 {
   grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.camera-control-btn6-state1 {
+#camera-control-btn6-state1 {
   grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.camera-control-btn7-state0 {
+#camera-control-btn7-state0 {
   grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn7-state1 {
+#camera-control-btn7-state1 {
   grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn8-state0 {
+#camera-control-btn8-state0 {
   grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn8-state1 {
+#camera-control-btn8-state1 {
   grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn9-state0 {
+#camera-control-btn9-state0 {
   grid-column: 28 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.camera-control-btn9-state1 {
+#camera-control-btn9-state1 {
   grid-column: 28 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.camera-control-btn10-state0 {
+#camera-control-btn10-state0 {
   grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.camera-control-btn10-state1 {
+#camera-control-btn10-state1 {
   grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.camera-control-btn11-state0 {
+#camera-control-btn11-state0 {
   grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.camera-control-btn11-state1 {
+#camera-control-btn11-state1 {
   grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.camera-control-btn12-state0 {
+#camera-control-btn12-state0 {
   grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.camera-control-btn12-state1 {
+#camera-control-btn12-state1 {
   grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.camera-control-btn13-state0 {
+#camera-control-btn13-state0 {
   grid-column: 20 / span 11;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.camera-control-btn13-state1 {
+#camera-control-btn13-state1 {
   grid-column: 20 / span 11;
-  grid-row: 7 / span 3;
-  display: none;
+  grid-row: 10 / span 3;
+  /*display: none;*/
 }
 
 /* 書画カメラリモコンポップアップページ */
@@ -836,124 +855,123 @@ main {
   display: none;
 }
 
-.ohc-control-txt1 {
+#ohc-control-txt1 {
   grid-column: 5 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   text-align: center;
   margin: auto;
 }
 
-.ohc-control-btn1-state0 {
+#ohc-control-btn1-state0 {
   grid-column: 8 / span 4;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ohc-control-btn1-state1 {
+#ohc-control-btn1-state1 {
   grid-column: 8 / span 4;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ohc-control-txt2 {
+#ohc-control-txt2 {
   grid-column: 14 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   text-align: center;
   margin: auto;
 }
 
-.ohc-control-btn2-state0 {
+#ohc-control-btn2-state0 {
   grid-column: 17 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ohc-control-btn2-state1 {
+#ohc-control-btn2-state1 {
   grid-column: 17 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ohc-control-btn3-state0 {
+#ohc-control-btn3-state0 {
   grid-column: 25 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ohc-control-btn3-state1 {
+#ohc-control-btn3-state1 {
   grid-column: 25 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ohc-control-txt3 {
+#ohc-control-txt3 {
   grid-column: 14 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   text-align: center;
   margin: auto;
 }
 
-.ohc-control-btn4-state0 {
+#ohc-control-btn4-state0 {
   grid-column: 17 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ohc-control-btn4-state1 {
+#ohc-control-btn4-state1 {
   grid-column: 17 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ohc-control-btn5-state0 {
+#ohc-control-btn5-state0 {
   grid-column: 25 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ohc-control-btn5-state1 {
+#ohc-control-btn5-state1 {
   grid-column: 25 / span 3;
-  grid-row: 4 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ohc-control-txt4 {
+#ohc-control-txt4 {
   grid-column: 14 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   text-align: center;
   margin: auto;
 }
 
-.ohc-control-btn6-state0 {
+#ohc-control-btn6-state0 {
   grid-column: 17 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ohc-control-btn6-state1 {
+#ohc-control-btn6-state1 {
   grid-column: 17 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.ohc-control-btn7-state0 {
+#ohc-control-btn7-state0 {
   grid-column: 21 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ohc-control-btn7-state1 {
+#ohc-control-btn7-state1 {
   grid-column: 21 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.ohc-control-btn8-state0 {
+#ohc-control-btn8-state0 {
   grid-column: 25 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ohc-control-btn8-state1 {
+#ohc-control-btn8-state1 {
   grid-column: 25 / span 3;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-
-/* ブルーレイリモコンポップアップページ */
+/* ＳＳＲリモコンポップアップページ */
 .popup-ssr-control {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
@@ -963,190 +981,227 @@ main {
   /*display: none;*/
 }
 
-.ssr-control-btn1-state0 {
-  grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn1-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ssr-control-btn1-state1 {
-  grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn1-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ssr-control-btn2-state0 {
-  grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn2-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ssr-control-btn2-state1 {
-  grid-column: 7 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn2-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ssr-control-btn3-state0 {
-  grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn3-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 2 / span 3;
 }
 
-.ssr-control-btn3-state1 {
-  grid-column: 11 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn3-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 2 / span 3;
   display: none;
 }
 
-.ssr-control-btn4-state0 {
-  grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn4-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ssr-control-btn4-state1 {
-  grid-column: 3 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn4-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ssr-control-btn5-state0 {
-  grid-column: 7 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn5-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ssr-control-btn5-state1 {
-  grid-column: 7 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn5-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ssr-control-btn6-state0 {
-  grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn6-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ssr-control-btn6-state1 {
-  grid-column: 11 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn6-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ssr-control-btn7-state0 {
-  grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+#ssr-control-btn7-state0 {
+  grid-column: 21 / span 3;
+  grid-row: 6 / span 3;
 }
 
-.ssr-control-btn7-state1 {
-  grid-column: 7 / span 3;
-  grid-row: 7 / span 3;
+#ssr-control-btn7-state1 {
+  grid-column: 21 / span 3;
+  grid-row: 6 / span 3;
   display: none;
 }
 
-.ssr-control-btn8-state0 {
-  grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn8-state0 {
+  grid-column: 9 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ssr-control-btn8-state1 {
-  grid-column: 20 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn8-state1 {
+  grid-column: 9 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.ssr-control-btn9-state0 {
-  grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn9-state0 {
+  grid-column: 13 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ssr-control-btn9-state1 {
-  grid-column: 24 / span 3;
-  grid-row: 1 / span 3;
+#ssr-control-btn9-state1 {
+  grid-column: 13 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.ssr-control-btn10-state0 {
-  grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn10-state0 {
+  grid-column: 17 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ssr-control-btn10-state1 {
-  grid-column: 20 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn10-state1 {
+  grid-column: 17 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
 
-.ssr-control-btn11-state0 {
-  grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn11-state0 {
+  grid-column: 21 / span 3;
+  grid-row: 10 / span 3;
 }
 
-.ssr-control-btn11-state1 {
-  grid-column: 24 / span 3;
-  grid-row: 4 / span 3;
+#ssr-control-btn11-state1 {
+  grid-column: 21 / span 3;
+  grid-row: 10 / span 3;
   display: none;
 }
-
-.ssr-control-btn12-state0 {
-  grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
-}
-
-.ssr-control-btn12-state1 {
-  grid-column: 28 / span 3;
-  grid-row: 4 / span 3;
-  display: none;
-}
-
-.ssr-control-btn13-state0 {
-  grid-column: 24 / span 3;
-  grid-row: 7 / span 3;
-}
-
-.ssr-control-btn13-state1 {
-  grid-column: 24 / span 3;
-  grid-row: 7 / span 3;
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* サイドバーエリア定義 */
 aside {
-  background-color: royalblue;
+  background-color: rgb(65, 105, 225, 0.6);
   grid-column: 14 / span 3;
   grid-row: 2 / span 7;
-
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(18, 1fr);
 }
 
-aside p {
-  text-align: center;
+#audio-txt1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  margin: auto;
 }
+
+#audio-txt2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+  margin: auto;
+}
+
+#slider-wrapper-av {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 10;
+}
+
+#slider-wrapper-av #item-main-vol[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 10;
+}
+
+#slider-wrapper-mic #item-mic-vol[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#audio-mute-btn1-state0 {
+  grid-column: 1 / span 2;
+  grid-row: 14 / span 2;
+  margin: 5%;
+}
+
+#audio-mute-btn1-state1 {
+  grid-column: 1 / span 2;
+  grid-row: 14 / span 2;
+  display: none;
+}
+
+#audio-mute-btn2-state0 {
+  grid-column: 3 / span 2;
+  grid-row: 14 / span 2;
+  margin: 5%;
+}
+
+#audio-mute-btn2-state1 {
+  grid-column: 3 / span 2;
+  grid-row: 14 / span 2;
+  margin: 5%;
+  display: none;
+}
+
+#audio-details-btn-state0 {
+  grid-column: 1 / span 4;
+  grid-row: 17 / span 2;
+  margin: 4%;
+}
+
+#audio-details-btn-state1 {
+  grid-column: 1 / span 4;
+  grid-row: 17 / span 2;
+  margin: 4%;
+  display: none;
+}
+
+
+
+
+
+
 
 
 /* フッターエリア定義 */
 footer {
-  background-color: royalblue;
+  background-color: rgb(65, 105, 225, 0.6);
   grid-column: 1 / span 16;
   grid-row: 9 / span 1;
 }
@@ -1154,3 +1209,91 @@ footer {
 footer p {
   margin-left: 1em;
 }
+
+.modal-dialog-container {
+  height: inherit;
+  grid-column: 1 / span 16;
+  grid-row: 1 / span 9;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+  /*
+  ポジションをrelativeにしないとz-indexが効かずにポップアップページが
+  最上位に表示されない
+  */
+  position: relative;
+  background-color: black;
+  display: none;
+}
+
+.shutdown-dialog-box {
+  grid-column: 6 / span 6;
+  grid-row: 4 / span 3;
+}
+
+.shutdown-dialog-item {
+  grid-column: 6 / span 6;
+  grid-row: 4 / span 3;
+  margin: 5% 4% 1% 4%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+#shutdown-message {
+  grid-column: 1 / span 16;
+  grid-row: 3 / span 2;
+  margin: auto;
+}
+
+#shutdown-message p {
+  color: black;
+}
+
+#shutdown-yes-btn-state0 {
+  grid-column: 3 / span 5;
+  grid-row: 5 / span 3;
+  margin: 5%;
+}
+
+#shutdown-yes-btn-state1 {
+  grid-column: 5 / span 5;
+  grid-row: 5 / span 3;
+  margin: 5%;
+  display: none;
+}
+
+#shutdown-no-btn-state0 {
+  grid-column: 10 / span 5;
+  grid-row: 5 / span 3;
+  margin: 5%;
+}
+
+#shutdown-no-btn-state1 {
+  grid-column: 10 / span 5;
+  grid-row: 5 / span 3;
+  margin: 5%;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.volume-detail-container {
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column: 1 / span 16;
+  grid-row: 1 / span 9;
+  display: none;
+}
+
+

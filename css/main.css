@@ -151,10 +151,10 @@ footer {
 }
 .box29 .box-title {
   font-size: 1.2em;
-  background: #539bd3;
+  background: rgb(83, 155, 211);
   padding: 4px;
   text-align: center;
-  color: #FFF;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   letter-spacing: 0.05em;
 }
@@ -170,10 +170,10 @@ footer {
 }
 .box30 .box-title {
   font-size: 1.2em;
-  background: #539bd3;
+  background: rgb(83, 155, 211);
   padding: 4px;
   text-align: center;
-  color: #FFF;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   letter-spacing: 0.05em;
 }
