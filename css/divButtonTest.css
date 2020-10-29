@@ -27,7 +27,7 @@ body {
 }
 
 #start-page {
-  /*display: none;*/
+  display: none;
 }
 
 #start-btn-state0 {
@@ -61,9 +61,136 @@ body {
   display: none;
 }
 
+#startup-animation-page p {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white;
+}
+
+.spinner.type1 {
+  border-radius: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+  /* ローディング要素のアニメーションを指定 */
+  -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+  animation: spinner1_1 1.5s infinite linear forwards;
+}
+
+.spinner.type1 span {
+  /* Loading テキストのアニメーションを指定 */
+  animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+}
+
+@-webkit-keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+#shutdown-animation-page {
+  display: none;
+}
+
+#shutdown-animation-page p {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+}
+
 #main-page {
   height: inherit;
-  display: none;
+  /*display: none;*/
 }
 
 .body-container {
@@ -132,11 +259,14 @@ main {
 
 .box {
   height: 100%;
-  background-color: rgb(220, 239, 255);
+  background-color: rgb(65, 105, 225, 0);
+  border: solid;
+  border-color: rgb(77, 140, 186);
+  border-width: 0.5%;
 }
 
 .box .box-title {
-  background-color: rgb(83, 155, 211);
+  background-color: rgb(77, 140, 186);
   text-align: center;
   color: rgb(255, 255, 255);
   padding: 0.2em;
@@ -167,6 +297,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* ＶＰ映像切替ポップアップページ表示スイッチ */
   /*display: none;*/
 }
 
@@ -265,7 +397,9 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  /*display: none;*/
+
+  /* モニター映像切替ポップアップページ表示スイッチ */
+  display: none;
 }
 
 #moni-btn1-state0 {
@@ -363,6 +497,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* ＶＰ操作ポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -406,6 +542,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* スクリーン操作ポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -449,6 +587,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* 照明操作ポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -492,6 +632,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* 録画映像選択ポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -546,6 +688,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* ブルーレイリモコンポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -699,6 +843,8 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* カメラリモコンポップアップページ表示スイッチ */
   display: none;
 }
 
@@ -852,11 +998,13 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+
+  /* 書画カメラリモコンポップアップページ表示スイッチ */
   display: none;
 }
 
 #ohc-control-txt1 {
-  grid-column: 5 / span 3;
+  grid-column: 4 / span 4;
   grid-row: 2 / span 3;
   text-align: center;
   margin: auto;
@@ -978,7 +1126,9 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  /*display: none;*/
+
+  /* ＳＳＲリモコンポップアップページ表示スイッチ */
+  display: none;
 }
 
 #ssr-control-btn1-state0 {
@@ -1102,7 +1252,7 @@ main {
   display: none;
 }
 
-/* サイドバーエリア定義 */
+/* 右サイドバーエリア定義 */
 aside {
   background-color: rgb(65, 105, 225, 0.6);
   grid-column: 14 / span 3;
@@ -1114,19 +1264,19 @@ aside {
 
 #audio-txt1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
+  grid-row: 4 / span 2;
   margin: auto;
 }
 
 #audio-txt2 {
   grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
+  grid-row: 4 / span 2;
   margin: auto;
 }
 
 #slider-wrapper-av {
   grid-column: 1 / span 2;
-  grid-row: 3 / span 10;
+  grid-row: 6 / span 7;
 }
 
 #slider-wrapper-av #item-main-vol[type="range"] {
@@ -1141,7 +1291,7 @@ aside {
 
 #slider-wrapper-mic {
   grid-column: 3 / span 2;
-  grid-row: 3 / span 10;
+  grid-row: 6 / span 7;
 }
 
 #slider-wrapper-mic #item-mic-vol[type="range"] {
@@ -1192,13 +1342,6 @@ aside {
   display: none;
 }
 
-
-
-
-
-
-
-
 /* フッターエリア定義 */
 footer {
   background-color: rgb(65, 105, 225, 0.6);
@@ -1210,6 +1353,9 @@ footer p {
   margin-left: 1em;
 }
 
+/*
+  シャットダウン確認ダイアログ
+*/
 .modal-dialog-container {
   height: inherit;
   grid-column: 1 / span 16;
@@ -1223,7 +1369,13 @@ footer p {
   最上位に表示されない
   */
   position: relative;
-  background-color: black;
+  /*
+  opacityで指定すると、子要素も透明化されてしまうので
+  バックグランドのみ透明化する場合は,rgbaで個別に透明化を指定しなければならない
+  */
+  background-color: rgb(0, 0, 0, 0.6);
+
+  /* シャットダウン確認ダイアログ表示スイッチ */
   display: none;
 }
 
@@ -1277,23 +1429,354 @@ footer p {
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
+/*
+  音量設定ダイアログ
+*/
 .volume-detail-container {
   height: inherit;
+  grid-column: 1 / span 16;
+  grid-row: 1 / span 9;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(9, 1fr);
-  grid-column: 1 / span 16;
-  grid-row: 1 / span 9;
+
+  /*
+  ポジションをrelativeにしないとz-indexが効かずにポップアップページが
+  最上位に表示されない
+  */
+  position: relative;
+  /*
+  opacityで指定すると、子要素も透明化されてしまうので
+  バックグランドのみ透明化する場合は,rgbaで個別に透明化を指定しなければならない
+  */
+  background-color: rgb(0, 0, 0, 0.6);
+
+  /* 音量設定ダイアログ表示スイッチ */
   display: none;
 }
+
+.volume-detail-dialog-box {
+  grid-column: 4 / span 10;
+  grid-row: 2 / span 7;
+}
+
+.volume-detail-dialog-item {
+  grid-column: 4 / span 10;
+  grid-row: 2 / span 7;
+  margin: 5% 1% 1% 1%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+#mic1-txt {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic2-txt {
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic3-txt {
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic4-txt {
+  grid-column: 7 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic5-txt {
+  grid-column: 9 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic6-txt {
+  grid-column: 11 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic7-txt {
+  grid-column: 13 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#mic8-txt {
+  grid-column: 15 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+#slider-wrapper-mic1 {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic1 #slider-mic1[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic2 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic2 #slider-mic2[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic3 {
+  grid-column: 5 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic3 #slider-mic3[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic4 {
+  grid-column: 7 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic4 #slider-mic4[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic5 {
+  grid-column: 9 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic5 #slider-mic5[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic6 {
+  grid-column: 11 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic6 #slider-mic6[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic7 {
+  grid-column: 13 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic7 #slider-mic7[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-wrapper-mic8 {
+  grid-column: 15 / span 2;
+  grid-row: 3 / span 4;
+}
+
+#slider-wrapper-mic8 #slider-mic8[type="range"] {
+  /* Chrome, Opera, Safari 描画方向指定 */
+  -webkit-appearance: slider-vertical;
+  /* IE, Edge 描画方向指定 */
+  writing-mode: bt-lr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#slider-mute-btn1-state0 {
+  grid-column: 1 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn1-state1 {
+  grid-column: 1 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn2-state0 {
+  grid-column: 3 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn2-state1 {
+  grid-column: 3 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn3-state0 {
+  grid-column: 5 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn3-state1 {
+  grid-column: 5 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn4-state0 {
+  grid-column: 7 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn4-state1 {
+  grid-column: 7 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn5-state0 {
+  grid-column: 9 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn5-state1 {
+  grid-column: 9 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn6-state0 {
+  grid-column: 11 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn6-state1 {
+  grid-column: 11 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn7-state0 {
+  grid-column: 13 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn7-state1 {
+  grid-column: 13 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#slider-mute-btn8-state0 {
+  grid-column: 15 / span 2;
+  grid-row: 7 / span 1;
+  margin: 5%;
+}
+
+#slider-mute-btn8-state1 {
+  grid-column: 15 / span 2;
+  grid-row: 7 / span 2;
+  display: none;
+}
+
+#volume-detail-close-btn-state0 {
+  grid-column: 8 / span 2;
+  grid-row: 9 / span 1;
+  margin: 5%;
+}
+
+#volume-detail-close-btn-state1 {
+  grid-column: 8 / span 2;
+  grid-row: 9 / span 1;
+  margin: 5%;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

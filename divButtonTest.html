@@ -21,7 +21,12 @@
 
   <!-- 起動アニメーションページ -->
   <div id="startup-animation-page">
-
+    <div class="spinner type1">
+      <span>Starup...</span>
+    </div>
+    <div>
+      <p class="startup-text">システム起動中です<br>しばらくお待ちください</p>
+    </div>
   </div>
 
   <!-- メインページ -->
@@ -248,20 +253,20 @@
             </div>
           </div>
           <div class="element-button2-squer">
-            <p class="ohc-control-txt1">オート<br>フォーカス</p>
+            <p id="ohc-control-txt1">オート<br>フォーカス</p>
             <button type="button" id="ohc-control-btn1-state0">ＡＦ<br>0</button>
             <button type="button" id="ohc-control-btn1-state1">ＡＦ<br>1</button>
-            <p class="ohc-control-txt2">照明<br>ON/OFF</p>
+            <p id="ohc-control-txt2">照明<br>ON/OFF</p>
             <button type="button" id="ohc-control-btn2-state0">ＯＮ<br>0</button>
             <button type="button" id="ohc-control-btn2-state1">ＯＮ<br>1</button>
             <button type="button" id="ohc-control-btn3-state0">ＯＦＦ<br>0</button>
             <button type="button" id="ohc-control-btn3-state1">ＯＦＦ<br>1</button>
-            <p class="ohc-control-txt3">ズーム</p>
+            <p id="ohc-control-txt3">ズーム</p>
             <button type="button" id="ohc-control-btn4-state0">ＴＥＬＥ<br>0</button>
             <button type="button" id="ohc-control-btn4-state1">ＴＥＬＥ<br>1</button>
             <button type="button" id="ohc-control-btn5-state0">ＷＩＤＥ<br>0</button>
             <button type="button" id="ohc-control-btn5-state1">ＷＩＤＥ<br>1</button>
-            <p class="ohc-control-txt4">アイリス</p>
+            <p id="ohc-control-txt4">アイリス</p>
             <button type="button" id="ohc-control-btn6-state0">ＵＰ<br>0</button>
             <button type="button" id="ohc-control-btn6-state1">ＵＰ<br>1</button>
             <button type="button" id="ohc-control-btn7-state0">ノーマル<br>0</button>
@@ -360,23 +365,113 @@
         </div>
       </div>
 
-
-
       <!-- 音量詳細モーダルダイアログページ コンテナー -->
       <div class="volume-detail-container">
-        <p>ボリューム音量詳細ポップアップページ</p>
+        <div class="volume-detail-dialog-box">
+          <div class="box">
+            <div class="box-title">音量設定</div>
+          </div>
+        </div>
+        <div class="volume-detail-dialog-item">
+          <!-- 音量詳細 MIC1テキスト -->
+          <div id="mic1-txt">マイク<br>１</div>
+          <!-- 音量詳細 MIC2テキスト -->
+          <div id="mic2-txt">マイク<br>２</div>
+          <!-- 音量詳細 MIC3テキスト -->
+          <div id="mic3-txt">マイク<br>３</div>
+          <!-- 音量詳細 MIC4テキスト -->
+          <div id="mic4-txt">マイク<br>４</div>
+          <!-- 音量詳細 MIC5テキスト -->
+          <div id="mic5-txt">マイク<br>５</div>
+          <!-- 音量詳細 MIC6テキスト -->
+          <div id="mic6-txt">マイク<br>６</div>
+          <!-- 音量詳細 MIC7テキスト -->
+          <div id="mic7-txt">マイク<br>７</div>
+          <!-- 音量詳細 MIC8テキスト -->
+          <div id="mic8-txt">マイク<br>８</div>
+
+          <!-- 音量詳細 MIC1スライダーボリューム -->
+          <div id="slider-wrapper-mic1">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic1" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC2スライダーボリューム -->
+          <div id="slider-wrapper-mic2">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic2" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC3スライダーボリューム -->
+          <div id="slider-wrapper-mic3">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic3" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC4スライダーボリューム -->
+          <div id="slider-wrapper-mic4">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic4" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC5スライダーボリューム -->
+          <div id="slider-wrapper-mic5">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic5" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC6スライダーボリューム -->
+          <div id="slider-wrapper-mic6">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic6" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC7スライダーボリューム -->
+          <div id="slider-wrapper-mic7">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic7" min="0" max="100" value="70" orient="vertical">
+          </div>
+          <!-- 音量詳細 MIC8スライダーボリューム -->
+          <div id="slider-wrapper-mic8">
+            <!-- Firefoxの場合 orient="vertical"で描画方向指定 -->
+            <input type="range" id="slider-mic8" min="0" max="100" value="70" orient="vertical">
+          </div>
+
+          <!-- 音量 MIC1 MUTEボタン -->
+          <button type="button" id="slider-mute-btn1-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn1-state1">ミュート<br>1</button>
+          <!-- 音量 MIC2 MUTEボタン -->
+          <button type="button" id="slider-mute-btn2-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn2-state1">ミュート<br>1</button>
+          <!-- 音量 MIC3 MUTEボタン -->
+          <button type="button" id="slider-mute-btn3-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn3-state1">ミュート<br>1</button>
+          <!-- 音量 MIC4 MUTEボタン -->
+          <button type="button" id="slider-mute-btn4-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn4-state1">ミュート<br>1</button>
+          <!-- 音量 MIC5 MUTEボタン -->
+          <button type="button" id="slider-mute-btn5-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn5-state1">ミュート<br>1</button>
+          <!-- 音量 MIC6 MUTEボタン -->
+          <button type="button" id="slider-mute-btn6-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn6-state1">ミュート<br>1</button>
+          <!-- 音量 MIC7 MUTEボタン -->
+          <button type="button" id="slider-mute-btn7-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn7-state1">ミュート<br>1</button>
+          <!-- 音量 MIC8 MUTEボタン -->
+          <button type="button" id="slider-mute-btn8-state0">ミュート<br>0</button>
+          <button type="button" id="slider-mute-btn8-state1">ミュート<br>1</button>
+
+          <!-- 音量詳細モーダルダイアログページ「閉じる」ボタン -->
+          <button type="button" id="volume-detail-close-btn-state0">閉じる<br>0</button>
+          <button type="button" id="volume-detail-close-btn-state1">閉じる<br>1</button>
+        </div>
       </div>
-
-
-
     </div>
   </div>
 
-
-
   <!-- 終了アニメーションページ -->
   <div id="shutdown-animation-page">
-
+    <div class="spinner type1">
+      <span>Shutdown...</span>
+    </div>
+    <div>
+      <p class="startup-text">システム終了中です<br>しばらくお待ちください</p>
+    </div>
   </div>
 
 
