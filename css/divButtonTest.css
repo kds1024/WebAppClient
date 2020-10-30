@@ -27,7 +27,7 @@ body {
 }
 
 #start-page {
-  display: none;
+  /*display: none;*/
 }
 
 #start-btn-state0 {
@@ -190,7 +190,7 @@ body {
 
 #main-page {
   height: inherit;
-  /*display: none;*/
+  display: none;
 }
 
 .body-container {
