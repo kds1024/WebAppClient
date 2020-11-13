@@ -10,9 +10,21 @@ ws.onerror = function(error) {
   console.log(error);
 };
 
-//メッセージ受信 イベント処理
+/*
+  メッセージ受信 イベント処理
+  サーバーからの
+*/
 ws.onmessage = function(e) {
   console.log(e.data);
+
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 //通信切断 イベント処理
@@ -41,7 +53,9 @@ ws.onclose = function(e) {
   let btn = document.getElementById("start-btn-state0");
   // mouse down
   btn.addEventListener('mousedown', () => {
-    ws.send('mouse down')
+    ws.send(
+      JSON.stringify(['start-btn-state0', 'mousedown'])
+    );
   }, false);
 }
 
